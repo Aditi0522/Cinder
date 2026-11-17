@@ -1,0 +1,52 @@
+{
+  "note": "Preliminary failure evidence only. Its launcher-only RSS measurements were rejected and are omitted. The corrected throughput grid uses commit 1682301.",
+  "git_commit": "fc5049a82ec0a74ff8a9d9c86df1c6161f8d55a0",
+  "samples": 10,
+  "pass": 6,
+  "failures": [
+    {
+      "problem_id": "minif2f.valid.algebra_sqineq_4bap1lt4bsqpap1sq",
+      "verdict": "infrastructure_error",
+      "wall_time_seconds": 60.077952171996,
+      "errors": [
+        {
+          "message": "Lean wall-clock timeout",
+          "position": null
+        }
+      ]
+    },
+    {
+      "problem_id": "minif2f.valid.mathd_numbertheory_101",
+      "verdict": "infrastructure_error",
+      "wall_time_seconds": 60.003281985991634,
+      "errors": [
+        {
+          "message": "Lean wall-clock timeout",
+          "position": null
+        }
+      ]
+    },
+    {
+      "problem_id": "minif2f.valid.mathd_algebra_10",
+      "verdict": "infrastructure_error",
+      "wall_time_seconds": 60.007055027002934,
+      "errors": [
+        {
+          "message": "Lean wall-clock timeout",
+          "position": null
+        }
+      ]
+    },
+    {
+      "problem_id": "minif2f.valid.mathd_algebra_51",
+      "verdict": "infrastructure_error",
+      "wall_time_seconds": 60.00207316500018,
+      "errors": [
+        {
+          "message": "Lean wall-clock timeout",
+          "position": null
+        }
+      ]
+    }
+  ]
+}

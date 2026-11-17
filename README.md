@@ -14,8 +14,10 @@ Use Linux with `git`, `curl`, [uv](https://docs.astral.sh/uv/getting-started/ins
 [bubblewrap](https://github.com/containers/bubblewrap), `prlimit` and a
 working systemd user session with delegated cgroup v2 memory/pid controllers.
 On Ubuntu, the additional packages are `bubblewrap util-linux`. User
-namespaces must be enabled. The verifier fails closed if isolation or aggregate
-resource limits cannot be applied; there is no unbounded fallback.
+namespaces must be enabled. Allow at least 10 GiB of free disk space for a fresh
+Mathlib checkout/build cache; a small tmpfs checkout may not fit. The verifier
+fails closed if isolation or aggregate resource limits cannot be applied; there
+is no unbounded fallback.
 
 From a fresh checkout, choose an environment:
 
@@ -25,8 +27,9 @@ bash scripts/setup.sh --environment minif2f # Mathlib cache, checker and full te
 ```
 
 Setup installs the selected Lean toolchain through elan, syncs Python dependencies
-from `uv.lock`, fetches cached Mathlib builds when selected, builds the trusted
-checker, and runs the relevant tests. Downloads require internet during setup;
+from `uv.lock`, builds the core checker, fetches cached Mathlib builds and builds
+the selected benchmark checker when requested, and runs the relevant tests.
+Downloads require internet during setup;
 proof workers have no network access. Setup uses the checked-in Lake lockfile
 and does not run `lake update`.
 
@@ -103,7 +106,8 @@ Each candidate runs in a fresh process with read-only access to its toolchain,
 compiled libraries and input directory. A private tmpfs is the only writable
 regular filesystem. Bubblewrap isolates process/network namespaces and disables
 nested user namespaces. A systemd scope enforces aggregate memory and task
-limits across the worker and its descendants; swap is disabled for that scope.
+limits on cgroup-charged memory and task counts across the worker and its
+descendants; swap is disabled for that scope.
 Task limits include threads. Default worker limits are 4 GiB memory, 64 tasks,
 64 MiB tmpfs, 256 file descriptors, no core dumps and 2 MB per-file/output writes.
 Memory, task and tmpfs limits are configurable. Wall-clock and heartbeat limits

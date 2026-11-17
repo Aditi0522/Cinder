@@ -2,6 +2,11 @@
 
 Status: started; the Phase 1 completion gate has **not** been met.
 
+The core-only bring-up below is historical. The newer
+[issue #3 checklist](issue3.md) records the completed miniF2F/Mathlib environment,
+signature-aware verification, resource controls, diagnostics, manifests and
+[measured throughput](throughput.md).
+
 The PDF defines Phase 1 on pages 3–5. The current machine's capacity supersedes
 its old eight-core/no-GPU limits. Runtime concurrency and budgets are config
 values; generation and verification communicate through JSONL files so
@@ -37,24 +42,26 @@ need separate environments, not an automatic toolchain upgrade.
 
 ## Next milestones, in order
 
-1. Add a fully pinned miniF2F environment with cached Mathlib and a loader that
-   preserves trusted statements and records source hashes. Verify known human
-   proofs on the development split. Keep official test proofs out of pilot runs.
+1. Extend the versioned miniF2F development sanity subset to dataset-wide loaders
+   and audited problem lists. The pinned Mathlib environment and reference-proof
+   checks already work. Keep official test proofs out of pilot runs.
 2. Add miniCTX loaders with separate per-project environments and explicit
    context handling. Do not pretend one global Lean version supports all projects.
 3. Run the benchmark audit tools, pin their revisions and keep an exclusions
    ledger with reasons. No problem list is currently claimed to be audited.
-4. Normalize diagnostic source mapping and validate registered problems before
-   batch evaluation. Invalid trusted statements and context already receive
-   infrastructure-error verdicts rather than model-failure labels.
-5. Measure realistic Mathlib worker memory and throughput. Evaluate a persistent
-   REPL backend against the same sanity cases and verify state resets. Current
-   process isolation favors a clear trust boundary over import amortization.
+4. Exercise extraction, diagnostics and failure classification on representative
+   generated outputs. Source mapping is implemented; dataset/setup failures
+   retain infrastructure verdicts and labels.
+5. Re-measure on real generated proofs. Initial Mathlib worker scaling is
+   documented in `throughput.md`; two workers are recommended on this host.
+   Implement a persistent REPL only if it becomes necessary and equivalent
+   trust/resource/state-reset checks pass.
 6. Add Kaggle-compatible vLLM generation with per-batch checkpoints, pinned model
    and tokenizer revisions, per-sample metadata and safe resume behavior. Test a
    small model end to end on development problems.
-7. Reproduce from a clean clone, record throughput at explicit worker counts,
-   and review all Phase 1 gate criteria before tagging `phase1-done`.
+7. Review all remaining Phase 1 gate criteria, including end-to-end generation,
+   before tagging `phase1-done`. Infrastructure setup and reference verification
+   have their own clean-checkout validation under issue #3.
 
 The current syntax policy is an initial explicit denylist, backed by the kernel
 axiom audit and OS isolation. It is not a proof of resistance to every Lean

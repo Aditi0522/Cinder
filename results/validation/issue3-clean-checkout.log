@@ -1,0 +1,81 @@
+Using CPython 3.13.14
+Creating virtual environment at: .venv
+Resolved 8 packages in 1ms
+   Building cinder-harness @ file:///home/vaibhav/dev/lean_law/Cinder/artifacts/clean-checkout-final-o8pcspia/checkout
+      Built cinder-harness @ file:///home/vaibhav/dev/lean_law/Cinder/artifacts/clean-checkout-final-o8pcspia/checkout
+Prepared 1 package in 442ms
+Installed 7 packages in 177ms
+ + cinder-harness==0.1.0 (from file:///home/vaibhav/dev/lean_law/Cinder/artifacts/clean-checkout-final-o8pcspia/checkout)
+ + iniconfig==2.3.1
+ + packaging==26.3
+ + pluggy==1.7.0
+ + pygments==2.21.0
+ + pytest==9.2.0
+ + ruff==0.17.5
+info: toolchain 'leanprover/lean4:v4.24.0' is already installed
+✔ [2/4] Built Cinder.Verifier (1.6s)
+✔ [3/4] Built Cinder (568ms)
+Build completed successfully (4 jobs).
+Built lean-core-4.24.0: Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)
+info: toolchain 'leanprover/lean4:v4.24.0' is already installed
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4
+info: mathlib: checking out revision 'f897ebcf72cd16f89ab4577d0c826cd14afaafc7'
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision 'dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision '99657ad92e23804e279f77ea6dbdeebaa1317b98'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision 'd768126816be17600904726ca7976b185786e6b9'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision '556caed0eadb7901e068131d1be208dd907d07a2'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision '725ac8cd67acd70a7beaf47c3725e23484c1ef50'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision 'dea6a3361fa36d5a13f87333dc506ada582e025c'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision '8da40b72fece29b7d3fe3d768bac4c8910ce9bee'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision '91c18fa62838ad0ab7384c03c9684d99d306e1da'
+✔ [2/20] Built Cache.Lean (324ms)
+✔ [3/20] Built Cache.Lean:c.o (218ms)
+✔ [4/20] Built Cache.IO (1.0s)
+✔ [5/20] Built Cache.Hashing (450ms)
+✔ [6/20] Built Cache.Hashing:c.o (307ms)
+✔ [7/20] Built Cache.IO:c.o (1.0s)
+✔ [13/20] Built Batteries.Data.String.Basic:c.o (81ms)
+✔ [14/20] Built Batteries.Data.Array.Match:c.o (147ms)
+✔ [15/20] Built Batteries.Data.String.Matcher:c.o (142ms)
+✔ [16/20] Built Cache.Requests (887ms)
+✔ [17/20] Built Cache.Main (414ms)
+✔ [18/20] Built Cache.Main:c.o (303ms)
+✔ [19/20] Built Cache.Requests:c.o (843ms)
+✔ [20/20] Built cache:exe (647ms)
+Fetching ProofWidgets cloud release... done!
+Current branch: HEAD
+Using cache (Azure) from origin: leanprover-community/mathlib4
+No files to download
+Decompressing 7335 file(s)
+Unpacked in 5241 ms
+Completed successfully!
+✔ [2/4] Built Cinder.Verifier (1.8s)
+✔ [3/4] Built Cinder (621ms)
+Build completed successfully (4 jobs).
+Built minif2f-4.24.0: Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-9.2.0, pluggy-1.7.0
+rootdir: /home/vaibhav/dev/lean_law/Cinder/artifacts/clean-checkout-final-o8pcspia/checkout
+configfile: pyproject.toml
+testpaths: tests
+collected 136 items
+
+tests/test_cli.py ....                                                   [  2%]
+tests/test_environments.py .........                                     [  9%]
+tests/test_mathlib.py .............                                      [ 19%]
+tests/test_records.py .........................                          [ 37%]
+tests/test_resources.py .                                                [ 38%]
+tests/test_sandbox.py ......                                             [ 42%]
+tests/test_signatures.py ...................                             [ 56%]
+tests/test_verifier.py ...........................................       [ 88%]
+tests/test_worker_failures.py ................                           [100%]
+
+======================= 136 passed in 131.20s (0:02:11) ========================
