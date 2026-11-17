@@ -4,7 +4,7 @@ cd "$(dirname "$0")/.."
 export PATH="$HOME/.elan/bin:$PATH"
 command -v uv >/dev/null || { echo 'Install uv: https://docs.astral.sh/uv/' >&2; exit 1; }
 command -v bwrap >/dev/null || { echo 'Install bubblewrap (Ubuntu: sudo apt install bubblewrap).' >&2; exit 1; }
-for dependency in systemd-run prlimit /usr/bin/time; do
+for dependency in systemd-run prlimit; do
   command -v "$dependency" >/dev/null || { echo "Install required tool: $dependency" >&2; exit 1; }
 done
 environment=core

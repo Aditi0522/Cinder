@@ -11,9 +11,9 @@ generation are separate work. See [issue #3](https://github.com/Aditi0522/Cinder
 ## Setup
 
 Use Linux with `git`, `curl`, [uv](https://docs.astral.sh/uv/getting-started/installation/),
-[bubblewrap](https://github.com/containers/bubblewrap), GNU `time`, `prlimit` and a
+[bubblewrap](https://github.com/containers/bubblewrap), `prlimit` and a
 working systemd user session with delegated cgroup v2 memory/pid controllers.
-On Ubuntu, the additional packages are `bubblewrap time util-linux`. User
+On Ubuntu, the additional packages are `bubblewrap util-linux`. User
 namespaces must be enabled. The verifier fails closed if isolation or aggregate
 resource limits cannot be applied; there is no unbounded fallback.
 
@@ -134,7 +134,10 @@ Each run manifest records the Git commit and dirty state, source-file hashes,
 compiled checker hash, dependency/environment pins, effective config and worker
 count, input hashes, selected machine/runtime details, status, verdict counts
 and final result checksum. It does not record environment variables or credentials.
-Peak RSS is measured by a host supervisor outside the read-only sandbox.
+Worker RSS is sampled every 50 ms by the host supervisor across the worker's
+process tree, including children inside nested PID namespaces. `peak_rss_kb` is
+the largest observed process RSS, not a kernel high-water counter. Shared mapped
+library pages are included in each process's RSS.
 
 Infrastructure verdicts receive only the `infrastructure_error` label, regardless
 of diagnostic text or generation flags. A flushed marker records entry into

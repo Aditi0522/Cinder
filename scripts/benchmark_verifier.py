@@ -14,6 +14,7 @@ from pathlib import Path
 from harness.cli import read_jsonl
 from harness.environment import ROOT, VerifierConfig
 from harness.manifest import RunManifest, code_state, file_hash, machine_state
+from harness.resources import process_tree_rss
 from harness.schema import Problem, Sample
 from harness.verifier import LeanVerifier
 
@@ -28,23 +29,8 @@ class MemoryMonitor:
 
     def sample(self):
         while not self.stop.is_set():
-            processes = {}
-            for path in Path("/proc").glob("[0-9]*/stat"):
-                try:
-                    fields = path.read_text().rsplit(")", 1)[1].split()
-                    processes[int(path.parent.name)] = (int(fields[1]), int(fields[21]))
-                except (OSError, ValueError, IndexError):
-                    continue
-            descendants = {os.getpid()}
-            while True:
-                expanded = descendants | {
-                    pid for pid, (parent, _) in processes.items() if parent in descendants
-                }
-                if expanded == descendants:
-                    break
-                descendants = expanded
-            rss = sum(processes.get(pid, (0, 0))[1] for pid in descendants if pid != os.getpid())
-            self.peak_kb = max(self.peak_kb, rss * os.sysconf("SC_PAGE_SIZE") // 1024)
+            rss = process_tree_rss(os.getpid(), include_root=False)[1]
+            self.peak_kb = max(self.peak_kb, rss)
             self.stop.wait(0.1)
 
 
@@ -85,17 +71,17 @@ def measure(config, problems, samples, repeats, output, inputs):
         monitor.stop.set()
         monitor.thread.join()
         manifest.finish(status)
-    if status != "complete":
-        raise RuntimeError(f"Reference failure: {manifest.counts}")
     latencies = sorted(r.wall_time_seconds for r in results)
     return {
+        "status": status,
+        "verdict_counts": dict(manifest.counts),
         "workers": config.worker_count,
         "samples": len(results),
         "elapsed_seconds": elapsed,
-        "proofs_per_minute": 60 * len(results) / elapsed,
+        "proofs_per_minute": 60 * manifest.counts["pass"] / elapsed,
         "median_latency_seconds": statistics.median(latencies),
         "p95_latency_seconds": latencies[math.ceil(0.95 * len(latencies)) - 1],
-        "max_worker_rss_mb": max(r.peak_rss_kb or 0 for r in results) / 1024,
+        "max_sampled_worker_rss_mb": max(r.peak_rss_kb or 0 for r in results) / 1024,
         "sampled_peak_sum_rss_mb": monitor.peak_kb / 1024,
         "manifest": str(manifest.path),
         "results_sha256": file_hash(output),

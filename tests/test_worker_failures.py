@@ -72,8 +72,7 @@ def test_fatal_exit_is_not_hidden_by_an_earlier_candidate_diagnostic(worker):
     events = CONTEXT_READY + CANDIDATE_READY + diagnostic("tactic failed", "error")
     verdict, errors, _ = worker(events, -9)
     assert verdict == "candidate_crash"
-    # GNU time reports a signalled child using the conventional 128 + signal code.
-    assert any("137" in error["message"] for error in errors)
+    assert any("-9" in error["message"] for error in errors)
 
 
 @pytest.mark.parametrize("ready", [False, True])

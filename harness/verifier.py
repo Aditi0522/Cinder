@@ -12,6 +12,7 @@ from pathlib import Path
 from harness.classifier import classify
 from harness.environment import ROOT, LeanEnvironment, VerifierConfig
 from harness.extraction import extract_proof
+from harness.resources import process_tree_rss
 from harness.sandbox import Sandbox
 from harness.schema import Problem, Sample, VerificationResult
 
@@ -211,28 +212,33 @@ class LeanVerifier:
                     "/work/Candidate.lean",
                 ],
             )
-            # The host supervisor records RSS outside the read-only sandbox.
-            usage = work / "usage.txt"
-            command = ["/usr/bin/time", "-q", "-f", "%M", "-o", str(usage), *command]
             with tempfile.TemporaryFile() as output:
                 process = subprocess.Popen(
                     command,
+                    stdin=subprocess.DEVNULL,
                     stdout=output,
                     stderr=subprocess.STDOUT,
                     start_new_session=True,
                 )
                 timed_out = False
-                try:
-                    process.wait(timeout=self.config.timeout_seconds)
-                except subprocess.TimeoutExpired:
-                    timed_out = True
+                peak = 0
+                deadline = time.monotonic() + self.config.timeout_seconds
+                while True:
+                    peak = max(peak, process_tree_rss(process.pid)[0])
+                    remaining = deadline - time.monotonic()
                     try:
-                        os.killpg(process.pid, signal.SIGKILL)
-                    except ProcessLookupError:
-                        pass
-                    process.wait()
+                        process.wait(timeout=max(0, min(0.05, remaining)))
+                        break
+                    except subprocess.TimeoutExpired:
+                        if remaining > 0:
+                            continue
+                        timed_out = True
+                        try:
+                            os.killpg(process.pid, signal.SIGKILL)
+                        except ProcessLookupError:
+                            pass
+                        process.wait()
+                        break
                 output.seek(0)
                 raw = output.read(2_000_001)
-            measured = usage.read_text().strip() if usage.exists() else ""
-            peak = int(measured) if measured.isdigit() else None
             return (*_worker_result(raw, process.returncode, timed_out), peak)

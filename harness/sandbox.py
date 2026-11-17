@@ -12,7 +12,7 @@ class Sandbox:
     def __init__(self, environment: LeanEnvironment, config: VerifierConfig):
         self.environment = environment
         self.config = config
-        for command in ("bwrap", "systemd-run", "prlimit", "/usr/bin/time"):
+        for command in ("bwrap", "systemd-run", "prlimit"):
             if not shutil.which(command):
                 raise RuntimeError(f"Sandbox requires {command}")
         # This also checks cgroup delegation. No silent unbounded fallback.
