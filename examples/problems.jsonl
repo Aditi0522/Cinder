@@ -1,0 +1,2 @@
+{"problem_id":"sanity.nat_refl","statement":"∀ n : Nat, n = n","environment_id":"lean-core-4.24.0"}
+{"problem_id":"sanity.false","statement":"False","environment_id":"lean-core-4.24.0"}

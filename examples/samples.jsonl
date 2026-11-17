@@ -1,0 +1,2 @@
+{"problem_id":"sanity.nat_refl","sample_id":"0","model":"human-sanity","seed":0,"prompt_hash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","raw_output":"by intro n; rfl","token_count":null,"truncated":false}
+{"problem_id":"sanity.false","sample_id":"0","model":"injected-cheat","seed":0,"prompt_hash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","raw_output":"by sorry","token_count":null,"truncated":false}

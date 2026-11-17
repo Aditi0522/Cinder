@@ -1,0 +1,9 @@
+# Core-only bring-up environment. Benchmark environments will have their own
+# Lean and Mathlib pins; this is not a miniF2F or miniCTX experiment config.
+environment_id = "lean-core-4.24.0"
+lean_toolchain = "leanprover/lean4:v4.24.0"
+mathlib_commit = ""
+timeout_seconds = 30
+max_heartbeats = 200000
+# 0 uses available CPU cores minus one; set a positive value for a measured run.
+workers = 0

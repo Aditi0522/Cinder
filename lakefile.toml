@@ -1,0 +1,6 @@
+name = "cinder"
+version = "0.1.0"
+defaultTargets = ["Cinder"]
+
+[[lean_lib]]
+name = "Cinder"
