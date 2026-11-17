@@ -31,7 +31,7 @@ def worker(monkeypatch):
         if sleep_seconds:
             verifier.config = replace(verifier.config, timeout_seconds=0.3)
         problem = Problem("p", "True", verifier.config.environment_id)
-        return verifier._check(problem, "by trivial")
+        return verifier._check(problem, "by trivial")[:3]
 
     return replay
 
@@ -72,7 +72,8 @@ def test_fatal_exit_is_not_hidden_by_an_earlier_candidate_diagnostic(worker):
     events = CONTEXT_READY + CANDIDATE_READY + diagnostic("tactic failed", "error")
     verdict, errors, _ = worker(events, -9)
     assert verdict == "candidate_crash"
-    assert any("-9" in error["message"] for error in errors)
+    # GNU time reports a signalled child using the conventional 128 + signal code.
+    assert any("137" in error["message"] for error in errors)
 
 
 @pytest.mark.parametrize("ready", [False, True])

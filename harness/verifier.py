@@ -3,20 +3,34 @@
 import json
 import os
 import re
-import shutil
 import signal
 import subprocess
 import tempfile
 import time
-import tomllib
-from dataclasses import dataclass
 from pathlib import Path
 
 from harness.classifier import classify
+from harness.environment import ROOT, LeanEnvironment, VerifierConfig
 from harness.extraction import extract_proof
-from harness.schema import Problem, Sample, VerificationResult, sha256
+from harness.sandbox import Sandbox
+from harness.schema import Problem, Sample, VerificationResult
 
-ROOT = Path(__file__).resolve().parents[1]
+__all__ = ["ROOT", "LeanVerifier", "VerifierConfig"]
+
+
+def _diagnostic(item: dict) -> dict:
+    source = "candidate" if item.get("fileName") == "candidate.lean" else "driver"
+    position = item.get("pos")
+    parsed = re.search(r"CINDER_PARSE: candidate\.lean:(\d+):(\d+):", item["data"])
+    if parsed:
+        source = "candidate"
+        position = {"line": int(parsed[1]), "column": int(parsed[2])}
+    return {
+        "message": item["data"],
+        "position": position,
+        "source": source,
+        "end_position": None if parsed else item.get("endPos"),
+    }
 
 
 def _worker_result(
@@ -48,7 +62,7 @@ def _worker_result(
             continue
         messages.append(item)
         if item["severity"] == "error":
-            errors.append({"message": item["data"], "position": item.get("pos")})
+            errors.append(_diagnostic(item))
             if not candidate_started or item["data"].startswith("CINDER_INTERNAL:"):
                 trusted_failure = True
 
@@ -108,109 +122,15 @@ def _worker_result(
     return "pass", [], report["axioms"]
 
 
-@dataclass(frozen=True)
-class VerifierConfig:
-    environment_id: str
-    lean_toolchain: str
-    mathlib_commit: str
-    timeout_seconds: float
-    max_heartbeats: int
-    workers: int
-
-    @classmethod
-    def load(cls, path: Path) -> "VerifierConfig":
-        config = cls(**tomllib.loads(path.read_text()))
-        if config.timeout_seconds <= 0 or config.max_heartbeats < 1 or config.workers < 0:
-            raise ValueError("Timeout and heartbeats must be positive; workers must be nonnegative")
-        if config.mathlib_commit:
-            raise ValueError("This bring-up backend supports the core-only environment")
-        return config
-
-    @property
-    def worker_count(self) -> int:
-        if self.workers:
-            return self.workers
-        cores = len(os.sched_getaffinity(0)) if hasattr(os, "sched_getaffinity") else os.cpu_count()
-        return max(1, (cores or 1) - 1)
-
-    @property
-    def config_hash(self) -> str:
-        from dataclasses import asdict
-
-        return sha256(json.dumps(asdict(self), sort_keys=True))
-
-
 class LeanVerifier:
     def __init__(self, config: VerifierConfig):
         self.config = config
-        elan = shutil.which("elan") or str(Path.home() / ".elan/bin/elan")
-        self.lean = Path(
-            subprocess.check_output([elan, "which", "lean"], cwd=ROOT, text=True).strip()
-        ).resolve()
-        self.toolchain = self.lean.parent.parent
-        actual_version = subprocess.check_output([str(self.lean), "--version"], text=True)
-        expected = config.lean_toolchain.rsplit(":v", 1)[-1]
-        if not re.search(rf"version {re.escape(expected)}(?:,|\))", actual_version):
-            raise RuntimeError(f"Lean version mismatch: {actual_version.strip()}")
-        if (ROOT / "lean-toolchain").read_text().strip() != config.lean_toolchain:
-            raise RuntimeError("Config does not match this project's pinned toolchain")
-        self.bwrap = shutil.which("bwrap")
-        if not self.bwrap:
-            raise RuntimeError("bubblewrap is required; install it before verification")
-        if not (ROOT / ".lake/build/lib/lean/Cinder/Verifier.olean").exists():
-            raise RuntimeError("Verifier module is not built; run scripts/setup.sh")
-        # Fail closed if namespaces are disabled. Never silently run candidates on the host.
-        subprocess.run(
-            self._sandbox_command(ROOT, ["/usr/bin/true"]),
-            check=True,
-            capture_output=True,
-            text=True,
-            timeout=10,
-        )
+        self.environment = LeanEnvironment(config)
+        self.lean = self.environment.lean
+        self.sandbox = Sandbox(self.environment, config)
 
     def _sandbox_command(self, work: Path, command: list[str]) -> list[str]:
-        args = [
-            self.bwrap,
-            "--unshare-all",
-            "--die-with-parent",
-            "--new-session",
-            "--clearenv",
-            "--ro-bind",
-            "/usr",
-            "/usr",
-        ]
-        for path in ("/lib", "/lib64"):
-            if Path(path).exists():
-                args += ["--ro-bind", path, path]
-        args += [
-            "--ro-bind",
-            str(self.toolchain),
-            str(self.toolchain),
-            "--ro-bind",
-            str(ROOT / ".lake/build/lib/lean"),
-            "/cinder-lib",
-            "--bind",
-            str(work),
-            "/work",
-            "--proc",
-            "/proc",
-            "--dev",
-            "/dev",
-            "--tmpfs",
-            "/tmp",
-            "--setenv",
-            "LEAN_PATH",
-            "/cinder-lib",
-            "--setenv",
-            "HOME",
-            "/tmp",
-            "--setenv",
-            "PATH",
-            f"{self.lean.parent}:/usr/bin",
-            "--chdir",
-            "/work",
-        ]
-        return args + command
+        return self.sandbox.command(work, command)
 
     def verify(self, problem: Problem, sample: Sample) -> VerificationResult:
         started = time.monotonic()
@@ -218,6 +138,7 @@ class LeanVerifier:
         errors = []
         axioms = []
         verdict = "infrastructure_error"
+        peak_rss_kb = None
         try:
             if sample.problem_id != problem.problem_id:
                 raise ValueError("Sample and problem ids differ")
@@ -229,7 +150,7 @@ class LeanVerifier:
                 verdict = "extraction_error"
                 errors = [{"message": str(error), "position": None}]
             else:
-                verdict, errors, axioms = self._check(problem, proof)
+                verdict, errors, axioms, peak_rss_kb = self._check(problem, proof)
         except (OSError, ValueError, subprocess.SubprocessError) as error:
             errors = [{"message": str(error), "position": None}]
         result = VerificationResult(
@@ -256,23 +177,29 @@ class LeanVerifier:
             problem_hash=problem.problem_hash,
             config_hash=self.config.config_hash,
             axioms=axioms,
+            metadata=sample.metadata,
+            additional_fields=sample.additional_fields,
+            peak_rss_kb=peak_rss_kb,
         )
         result.labels = classify(verdict, errors, sample.raw_output, sample.truncated)
         return result
 
-    def _check(self, problem: Problem, proof: str) -> tuple[str, list[dict], list[str]]:
+    def _check(self, problem: Problem, proof: str) -> tuple[str, list[dict], list[str], int | None]:
         if any(not re.fullmatch(r"[A-Za-z_][A-Za-z_0-9.]*", name) for name in problem.imports):
             raise ValueError("Invalid trusted import name")
         with tempfile.TemporaryDirectory(prefix="cinder-") as directory:
             work = Path(directory)
             (work / "statement.txt").write_text(problem.statement, encoding="utf-8")
             (work / "proof.txt").write_text(proof, encoding="utf-8")
+            (work / "binders.txt").write_text(problem.binders, encoding="utf-8")
             source = "import Cinder.Verifier\n"
             source += "".join(f"import {name}\n" for name in problem.imports)
             source += problem.preamble + "\n"
             source += "set_option Elab.async false\n"
+            source += f"set_option maxHeartbeats {self.config.max_heartbeats}\n"
+            source += "set_option autoImplicit false\n"
             source += "#cinder_context_ready\n"
-            source += '#cinder_verify "/work/statement.txt" "/work/proof.txt"\n'
+            source += '#cinder_verify "/work/statement.txt" "/work/proof.txt" "/work/binders.txt"\n'
             (work / "Candidate.lean").write_text(source, encoding="utf-8")
             command = self._sandbox_command(
                 work,
@@ -284,6 +211,9 @@ class LeanVerifier:
                     "/work/Candidate.lean",
                 ],
             )
+            # The host supervisor records RSS outside the read-only sandbox.
+            usage = work / "usage.txt"
+            command = ["/usr/bin/time", "-q", "-f", "%M", "-o", str(usage), *command]
             with tempfile.TemporaryFile() as output:
                 process = subprocess.Popen(
                     command,
@@ -296,8 +226,13 @@ class LeanVerifier:
                     process.wait(timeout=self.config.timeout_seconds)
                 except subprocess.TimeoutExpired:
                     timed_out = True
-                    os.killpg(process.pid, signal.SIGKILL)
+                    try:
+                        os.killpg(process.pid, signal.SIGKILL)
+                    except ProcessLookupError:
+                        pass
                     process.wait()
                 output.seek(0)
                 raw = output.read(2_000_001)
-            return _worker_result(raw, process.returncode, timed_out)
+            measured = usage.read_text().strip() if usage.exists() else ""
+            peak = int(measured) if measured.isdigit() else None
+            return (*_worker_result(raw, process.returncode, timed_out), peak)

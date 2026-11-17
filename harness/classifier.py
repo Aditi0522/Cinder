@@ -30,7 +30,7 @@ def classify(verdict: str, errors: list[dict], raw_output: str, truncated: bool)
         labels.append("no_code_block" if "fenced" in text else "malformed_output")
     elif re.search(r"\b(sorry|admit|sorryax)\b", text):
         labels.append("contains_sorry")
-    elif "cinder_policy" in text or "cinder_axioms" in text:
+    elif "cinder_policy" in text or "cinder_axioms" in text or "cinder_signature" in text:
         labels.append("policy_violation")
     elif "unknown identifier" in text or "unknown constant" in text:
         labels.append("unknown_identifier")

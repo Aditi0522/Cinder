@@ -16,6 +16,8 @@ class Problem:
     environment_id: str
     imports: tuple[str, ...] = ()
     preamble: str = ""
+    binders: str = ""
+    metadata: dict = field(default_factory=dict)
 
     @property
     def problem_hash(self) -> str:
@@ -33,6 +35,29 @@ class Sample:
     token_count: int | None = None
     truncated: bool = False
     output_format: str = "proof"
+    metadata: dict = field(default_factory=dict)
+    additional_fields: dict = field(default_factory=dict)
+
+    @classmethod
+    def from_record(cls, record: dict) -> "Sample":
+        from dataclasses import fields
+
+        known = {item.name for item in fields(cls)}
+        if not isinstance(record.get("metadata", {}), dict):
+            raise TypeError("Sample metadata must be a JSON object")
+        additional = dict(record.get("additional_fields", {}))
+        extras = {key: value for key, value in record.items() if key not in known}
+        if additional.keys() & extras.keys():
+            raise ValueError("Ambiguous duplicate fields in additional sample metadata")
+        additional.update(extras)
+        return cls(
+            **{
+                key: value
+                for key, value in record.items()
+                if key in known and key != "additional_fields"
+            },
+            additional_fields=additional,
+        )
 
 
 @dataclass
@@ -56,7 +81,11 @@ class VerificationResult:
     config_hash: str
     labels: list[str] = field(default_factory=list)
     axioms: list[str] = field(default_factory=list)
-    schema_version: int = 1
+    schema_version: int = 2
+    metadata: dict = field(default_factory=dict)
+    peak_rss_kb: int | None = None
+    additional_fields: dict = field(default_factory=dict)
+    run_id: str | None = None
 
     def to_json(self) -> str:
         return json.dumps(asdict(self), ensure_ascii=False, sort_keys=True)
