@@ -25,7 +25,10 @@ if ! command -v elan >/dev/null; then
   rm "$installer"
 fi
 uv sync --locked
-uv run python scripts/setup_environment.py "$config"
+uv run python scripts/setup_environment.py configs/verifier.toml
+if [[ $environment != core ]]; then
+  uv run python scripts/setup_environment.py "$config"
+fi
 if [[ $environment == core ]]; then
   uv run pytest -m 'not mathlib'
 else
