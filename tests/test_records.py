@@ -73,3 +73,25 @@ def test_repetition_and_truncation_can_coexist_with_failure():
 def test_invalid_ngram_size():
     with pytest.raises(ValueError):
         repetition_ratio("text", 0)
+
+
+@pytest.mark.parametrize(
+    "message",
+    [
+        "unknown identifier 'MissingTheorem'",
+        "type mismatch",
+        "unexpected token",
+        "tactic failed",
+        "CINDER_STATEMENT: sorryAx in trusted statement",
+    ],
+)
+def test_infrastructure_verdict_takes_precedence_over_diagnostics(message):
+    assert classify(
+        "infrastructure_error", [{"message": message}], "repeat these words " * 40, True
+    ) == ["infrastructure_error"]
+
+
+def test_candidate_crash_takes_precedence_over_diagnostics():
+    assert classify(
+        "candidate_crash", [{"message": "unknown identifier before crash"}], "", False
+    ) == ["candidate_crash"]

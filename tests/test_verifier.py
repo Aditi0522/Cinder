@@ -93,6 +93,7 @@ def test_axiom_audit_respects_trusted_namespace(verifier):
 def test_bad_trusted_statement_is_an_infrastructure_error(verifier, statement):
     result = run(verifier, statement, "by trivial")
     assert result.verdict == "infrastructure_error", result.errors
+    assert result.labels == ["infrastructure_error"]
 
 
 def test_bad_trusted_context_is_an_infrastructure_error(verifier):
@@ -120,3 +121,25 @@ def test_environment_mismatch_is_not_a_model_failure(verifier):
     problem = Problem("p", "True", "wrong-environment")
     sample = Sample("p", "0", "human", 0, sha256(""), "by trivial")
     assert verifier.verify(problem, sample).verdict == "infrastructure_error"
+
+
+@pytest.mark.parametrize(
+    "output",
+    [
+        "",
+        'Cinder.workerStdout.putStrLn "fatal runtime error"; Cinder.workerStdout.flush; ',
+    ],
+)
+def test_abrupt_candidate_exit_is_a_candidate_crash(verifier, output):
+    preamble = f'elab "cinder_abort" : tactic => do {output}IO.Process.exit 37'
+    result = run(verifier, "True", "by cinder_abort", preamble)
+    assert result.verdict == "candidate_crash", result.errors
+    assert result.labels == ["candidate_crash"]
+    assert any("37" in error["message"] for error in result.errors)
+
+
+def test_crash_in_trusted_statement_remains_an_infrastructure_error(verifier):
+    preamble = 'elab "cinder_abort_type" : term => do IO.Process.exit 37'
+    result = run(verifier, "cinder_abort_type", "by trivial", preamble)
+    assert result.verdict == "infrastructure_error", result.errors
+    assert result.labels == ["infrastructure_error"]
