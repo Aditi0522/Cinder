@@ -12,6 +12,8 @@ def repetition_ratio(text: str, n: int = 4) -> float:
 
 
 def classify(verdict: str, errors: list[dict], raw_output: str, truncated: bool) -> list[str]:
+    if verdict == "infrastructure_error":
+        return ["infrastructure_error"]
     labels = []
     if truncated:
         labels.append("truncated")
@@ -19,6 +21,8 @@ def classify(verdict: str, errors: list[dict], raw_output: str, truncated: bool)
         labels.append("repetition")
     if verdict == "pass":
         return labels
+    if verdict == "candidate_crash":
+        return labels + ["candidate_crash"]
     text = "\n".join(error["message"] for error in errors).lower()
     if verdict == "timeout":
         labels.append("timeout")
@@ -36,8 +40,6 @@ def classify(verdict: str, errors: list[dict], raw_output: str, truncated: bool)
         labels.append("type_mismatch")
     elif "tactic" in text or "unsolved goals" in text:
         labels.append("tactic_failed")
-    elif verdict == "infrastructure_error":
-        labels.append("infrastructure_error")
     else:
         labels.append("other")
     return labels

@@ -19,6 +19,95 @@ from harness.schema import Problem, Sample, VerificationResult, sha256
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def _worker_result(
+    raw: bytes, returncode: int, timed_out: bool
+) -> tuple[str, list[dict], list[str]]:
+    """Attribute runtime failures to the last observed, flushed execution phase."""
+    messages = []
+    errors = []
+    runtime_errors = []
+    candidate_started = False
+    trusted_failure = False
+    for line in raw.decode("utf-8", errors="replace").splitlines():
+        try:
+            item = json.loads(line)
+        except json.JSONDecodeError:
+            item = None
+        if item == {"cinder_event": "candidate_ready"}:
+            # A marker cannot erase failures already observed in trusted setup.
+            if not errors and not runtime_errors:
+                candidate_started = True
+            continue
+        if (
+            not isinstance(item, dict)
+            or not isinstance(item.get("severity"), str)
+            or item.get("severity") not in {"information", "warning", "error"}
+            or not isinstance(item.get("data"), str)
+        ):
+            runtime_errors.append({"message": line, "position": None})
+            continue
+        messages.append(item)
+        if item["severity"] == "error":
+            errors.append({"message": item["data"], "position": item.get("pos")})
+            if not candidate_started or item["data"].startswith("CINDER_INTERNAL:"):
+                trusted_failure = True
+
+    if len(raw) > 2_000_000:
+        runtime_errors.append({"message": "Lean diagnostic output exceeded 2 MB", "position": None})
+    if timed_out:
+        errors += runtime_errors + [{"message": "Lean wall-clock timeout", "position": None}]
+        return (
+            "timeout" if candidate_started and not trusted_failure else "infrastructure_error",
+            errors,
+            [],
+        )
+    # Lean exits 1 for ordinary diagnostics. Other statuses (including negative
+    # signal codes), or status 1 without diagnostics, describe abnormal execution.
+    if returncode not in (0, 1) or (returncode and not errors):
+        runtime_errors.append(
+            {
+                "message": f"Lean exited with code {returncode}",
+                "position": None,
+            }
+        )
+    if trusted_failure:
+        return "infrastructure_error", errors + runtime_errors, []
+    if runtime_errors:
+        verdict = "candidate_crash" if candidate_started else "infrastructure_error"
+        return verdict, errors + runtime_errors, []
+    if errors:
+        return "fail", errors, []
+
+    reports = [
+        item["data"].removeprefix("CINDER_RESULT:")
+        for item in messages
+        if item["data"].startswith("CINDER_RESULT:")
+    ]
+    if not candidate_started or len(reports) != 1:
+        return (
+            "infrastructure_error",
+            [
+                {
+                    "message": "Missing or ambiguous trusted verifier result or candidate phase marker",
+                    "position": None,
+                }
+            ],
+            [],
+        )
+    try:
+        report = json.loads(reports[0])
+        if (
+            not isinstance(report, dict)
+            or report.get("verdict") != "pass"
+            or not isinstance(report.get("axioms"), list)
+            or not all(isinstance(axiom, str) for axiom in report["axioms"])
+        ):
+            raise ValueError("Invalid trusted verifier result")
+    except ValueError as error:
+        return "infrastructure_error", [{"message": str(error), "position": None}], []
+    return "pass", [], report["axioms"]
+
+
 @dataclass(frozen=True)
 class VerifierConfig:
     environment_id: str
@@ -202,87 +291,13 @@ class LeanVerifier:
                     stderr=subprocess.STDOUT,
                     start_new_session=True,
                 )
+                timed_out = False
                 try:
                     process.wait(timeout=self.config.timeout_seconds)
                 except subprocess.TimeoutExpired:
+                    timed_out = True
                     os.killpg(process.pid, signal.SIGKILL)
                     process.wait()
-                    return "timeout", [{"message": "Lean wall-clock timeout", "position": None}], []
                 output.seek(0)
                 raw = output.read(2_000_001)
-            if len(raw) > 2_000_000:
-                return (
-                    "infrastructure_error",
-                    [
-                        {
-                            "message": "Lean diagnostic output exceeded 2 MB",
-                            "position": None,
-                        }
-                    ],
-                    [],
-                )
-            messages = []
-            for line in raw.decode("utf-8", errors="replace").splitlines():
-                try:
-                    messages.append(json.loads(line))
-                except json.JSONDecodeError:
-                    return "infrastructure_error", [{"message": line, "position": None}], []
-            errors = [
-                {"message": item.get("data", ""), "position": item.get("pos")}
-                for item in messages
-                if item.get("severity") == "error"
-            ]
-            if errors:
-                context_marker = next(
-                    (
-                        index
-                        for index, item in enumerate(messages)
-                        if item.get("data") == "CINDER_CONTEXT_READY"
-                    ),
-                    len(messages),
-                )
-                context_errors = any(
-                    item.get("severity") == "error" for item in messages[:context_marker]
-                )
-                if context_errors:
-                    return "infrastructure_error", errors, []
-                if any(
-                    "CINDER_STATEMENT:" in error["message"]
-                    or "CINDER_CONTEXT:" in error["message"]
-                    or "unknown module prefix" in error["message"]
-                    or "CINDER_INTERNAL:" in error["message"]
-                    for error in errors
-                ):
-                    return "infrastructure_error", errors, []
-                return "fail", errors, []
-            if process.returncode:
-                return (
-                    "infrastructure_error",
-                    [
-                        {
-                            "message": f"Lean exited with code {process.returncode}",
-                            "position": None,
-                        }
-                    ],
-                    [],
-                )
-            reports = [
-                item["data"].removeprefix("CINDER_RESULT:")
-                for item in messages
-                if item.get("data", "").startswith("CINDER_RESULT:")
-            ]
-            if len(reports) != 1:
-                return (
-                    "infrastructure_error",
-                    [
-                        {
-                            "message": "Missing or ambiguous trusted verifier result",
-                            "position": None,
-                        }
-                    ],
-                    [],
-                )
-            report = json.loads(reports[0])
-            if report.get("verdict") != "pass":
-                raise ValueError("Invalid trusted verifier result")
-            return "pass", [], report["axioms"]
+            return _worker_result(raw, process.returncode, timed_out)

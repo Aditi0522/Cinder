@@ -37,6 +37,7 @@ uv run cinder \
 The examples produce one accepted human proof and one rejected `sorry`.
 An output file must not already exist. The command exits 0 when evaluation
 completed, including ordinary failed proofs, and 2 for infrastructure errors.
+Candidate crashes are recorded per sample and do not abort the batch.
 
 Problem records own the statement, imports, preamble and environment ID. They
 must come from a trusted registry. Sample records supply the proof, never the
@@ -70,6 +71,17 @@ repetition, extraction failures, parser errors, unknown identifiers, tactic
 failures, type mismatches and timeouts. They do not infer obstacle versus
 capability. Lean diagnostic positions can refer to the proof term or the
 generated driver; normalized source mapping is still pending.
+
+Infrastructure verdicts receive only the `infrastructure_error` label, regardless
+of diagnostic text or generation flags. A flushed marker records entry into
+candidate processing after the trusted statement has been validated. Abnormal
+exits, malformed worker output, and diagnostic-output overflow after that marker
+receive `candidate_crash`; the same failures during trusted setup receive
+`infrastructure_error`. Timeouts follow the same boundary and use `timeout` once
+candidate processing has started. Exit/signal codes and available diagnostics
+are retained. This records the observed execution phase; it does not establish
+whether a kill was caused by the candidate, host memory pressure, or another
+external event. Missing or invalid success reports remain infrastructure errors.
 
 ```bash
 uv run pytest

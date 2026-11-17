@@ -4,6 +4,10 @@ open Lean Elab Command
 
 namespace Cinder
 
+-- Capture the worker stream at import time, before command elaboration replaces
+-- IO.getStdout with a buffered diagnostic stream.
+initialize workerStdout : IO.FS.Stream ← IO.getStdout
+
 -- These are policy restrictions in addition to the final kernel axiom audit.
 -- In particular, candidates cannot execute their own elaborator or adjust options.
 private def forbidden : List String := [
@@ -39,7 +43,6 @@ elab "#cinder_context_ready" : command =>
   let statementPath : TSyntax `str := ⟨stx[1]⟩
   let proofPath : TSyntax `str := ⟨stx[2]⟩
   let statement ← IO.FS.readFile statementPath.getString
-  let proof ← IO.FS.readFile proofPath.getString
   let env ← getEnv
   let target ← match Parser.runParserCategory env `term statement with
     | .ok target => pure (⟨target⟩ : TSyntax `term)
@@ -53,6 +56,11 @@ elab "#cinder_context_ready" : command =>
     throwError "CINDER_STATEMENT: {ex.toMessageData}"
   if (← get).messages.hasErrors then
     throwError "CINDER_STATEMENT: trusted statement has errors"
+  -- Log messages are buffered until this command finishes. Emit and flush the
+  -- phase boundary directly so it survives a fatal exit during candidate work.
+  workerStdout.putStrLn (Json.mkObj [("cinder_event", toJson "candidate_ready")]).compress
+  workerStdout.flush
+  let proof ← IO.FS.readFile proofPath.getString
   let candidate ← match Parser.runParserCategory env `term proof with
     | .ok candidate => pure (⟨candidate⟩ : TSyntax `term)
     | .error error => throwError "CINDER_PARSE: {error}"
