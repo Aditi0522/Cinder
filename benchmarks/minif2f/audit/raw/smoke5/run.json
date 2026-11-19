@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "smoke5:2026-11-18T18:58:52.897344+00:00",
+  "started_at": "2026-11-18T18:58:52.897344+00:00",
+  "dataset": {
+    "input": "../../benchmarks/minif2f/audit/smoke5.jsonl",
+    "resolved_name": "smoke5",
+    "format": "jsonl",
+    "split": null,
+    "header_file": null,
+    "total_hint": 5
+  },
+  "execution": {
+    "workspace": ".",
+    "toolchain": "leanprover/lean4:v4.30.0-rc2",
+    "backend": "subprocess",
+    "workers": 1,
+    "timeout": 120,
+    "output_dir": "../../benchmarks/minif2f/audit/raw/smoke5",
+    "resuming": false
+  }
+}

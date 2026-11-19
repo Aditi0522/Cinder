@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "full488:2026-11-19T10:50:10.004591+00:00",
+  "started_at": "2026-11-19T10:50:10.004591+00:00",
+  "dataset": {
+    "input": "/kaggle/input/datasets/aditis0ni05/minif2f-audit/full488.jsonl",
+    "resolved_name": "full488",
+    "format": "jsonl",
+    "split": null,
+    "header_file": null,
+    "total_hint": 488
+  },
+  "execution": {
+    "workspace": ".",
+    "toolchain": "leanprover/lean4:v4.30.0-rc2",
+    "backend": "subprocess",
+    "workers": 2,
+    "timeout": 120,
+    "output_dir": "/kaggle/working/audit/raw/full488",
+    "resuming": false
+  }
+}
