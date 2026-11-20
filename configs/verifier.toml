@@ -7,3 +7,7 @@ timeout_seconds = 30
 max_heartbeats = 200000
 # 0 uses available CPU cores minus one; set a positive value for a measured run.
 workers = 0
+project_dir = "."
+memory_mb = 4096
+max_processes = 64
+disk_mb = 64

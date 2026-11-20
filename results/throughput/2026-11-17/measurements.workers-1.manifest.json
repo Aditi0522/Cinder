@@ -1,0 +1,136 @@
+{
+  "code": {
+    "files": {
+      "Cinder.lean": "e1faaf11d839907b54bdc6a0977eaf01e11beb49754cdce44bf2cd9ee82e5d9b",
+      "Cinder/Verifier.lean": "e5f7ee4ae2a92e84b3f0fc88cd7f29218c753837b0401e36af3eff757022bc95",
+      "configs/minif2f.toml": "37f2931b16916554b154faf5d061f24e9d5314fdc21e4a7e36e138e075562164",
+      "configs/verifier.toml": "0baba201e6f6a4d6a07d0e21757a429519ba19c3d41a7f297d1ca22dacdc8a11",
+      "environments/minif2f/lake-manifest.json": "1f2575b1258dbe5e507b118f94700d94b35edfa7a44d32d9959e164b82f448e7",
+      "environments/minif2f/lakefile.toml": "35c584f9220bc20c7b9431ca7adf804815ff8c175dac21030d3c4b6c0c4266e6",
+      "environments/minif2f/lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "harness/__init__.py": "244447bdd45823ca3d2c6b816cadbbed436a5c95a7d78285727a52128c1a9823",
+      "harness/classifier.py": "2c9cefc2e517ca2e077e8d8e4c0e38663000da122eb02cfacbb1c91757b39820",
+      "harness/cli.py": "8bc08a403fa51735455a4d47538a8ba62416f2f94f534d51f2fe73acd590cfe4",
+      "harness/environment.py": "110a446725f9b4c49b44e7539796f6d50f66b99944d024d203c7affbec47983e",
+      "harness/extraction.py": "7b8bd138c8e6c8a547e4b0bcb90847d05d3ae77cc0c463788bd7eb8b0de91faa",
+      "harness/manifest.py": "713280838b8c3c0d9bab0a07257dc4d299509e58550514070686ba6584ec28ab",
+      "harness/resources.py": "e37c6eda56f9a6413a3da1a3fefba52d238542361becff64b3801fc4482b0549",
+      "harness/sandbox.py": "0fc9b1f5696a72e945ff03fb79ec7c7b38d50e32dd3112a1d0bdd92e698800f2",
+      "harness/schema.py": "40206b90a289d059f6542cdbe269fab72fb4bf0e5f4fecaf6a05d2755106557e",
+      "harness/verifier.py": "01cd4cbde86a2e62c07df665d35c5ea6b6ea78df344701a541130834b61be203",
+      "lake-manifest.json": "1846026161c297ddc864613a04d8b38d16220849a24e42e2c2429830a007c3d0",
+      "lakefile.toml": "2a5ef9fa010f964ce7b7d71dac0482bcf3a3d74f3107a9678663379d0c7418b0",
+      "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "pyproject.toml": "e5d50a201f441f5a08c4ab45cf188e15c148f44f3267d8271d125b57a32de6f3",
+      "scripts/benchmark_verifier.py": "c2e55224577c4c034728b8f81a2d517c11d800f2941a341f9c75f5254f4f5d0b",
+      "scripts/setup.sh": "1a6c7ff97db5aef77703b483a22130101777b1a79ed3d49043af32822fabede7",
+      "scripts/setup_environment.py": "542ae650adac52a8a615771e75e8967b59ae2987c0b09ea0be9e5aedfacf3a53",
+      "tests/test_cli.py": "256f522a6bc48d011a5eb0a286659579f9eeba0e2e0c0a8a9256a406073791b6",
+      "tests/test_environments.py": "c8d1790f5347ef5872df252554b5ef5d2f0aa710fc7ad116a9f648402e3813ee",
+      "tests/test_mathlib.py": "470341aa3633d06e5a88c400dd1be4ff1e5738030dd46d7278d971bf84e2327e",
+      "tests/test_records.py": "1717f54dcd328a362f9f51209c1409c98a16b91fb9e03dc93844013a618f0b88",
+      "tests/test_resources.py": "f46de9378d3d9b68ae8ce46f947f7ad8b87135f1c7e2311a92b13318cc03729c",
+      "tests/test_sandbox.py": "a7a063370e3db9249a4337b96493396e8902d0394d1099775ca04fd10bf88e19",
+      "tests/test_signatures.py": "8ed26b269997876963cf11ac68ab02fb528cc9c913632c743f8e8d1821181940",
+      "tests/test_verifier.py": "589bf0ada9b3fea36471eb005caac8a87778b326cc7d72fbc192e7e666f0e86a",
+      "tests/test_worker_failures.py": "5bbb8f0cffda34612da43d27da85249384d85db4c9f7212513126537d82b4b0d",
+      "uv.lock": "1d2ebb434cd9d5483cbf0ede42a759441b2b7a1d0c7fe9a6ba0a8fe1eb665d2a"
+    },
+    "git_commit": "16823017bb04e19b9c0e7a1fcfe1c0d33f8878e1",
+    "git_status": [],
+    "source_hash": "d330b2b61b180eb1021e2778e49a48a32b00e93c6aeb1dcdce74a18d3f4e5d03"
+  },
+  "config": {
+    "benchmark_commit": "5746b7d6c47855ce1294bed87329618ff7f1bc31",
+    "benchmark_repository": "https://github.com/yangky11/miniF2F-lean4",
+    "disk_mb": 64,
+    "environment_id": "minif2f-4.24.0",
+    "lean_toolchain": "leanprover/lean4:v4.24.0",
+    "mathlib_commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "max_heartbeats": 200000,
+    "max_processes": 64,
+    "memory_mb": 4096,
+    "project_dir": "environments/minif2f",
+    "timeout_seconds": 60,
+    "workers": 1
+  },
+  "config_hash": "7a3c7e28a412fcfd386e0d6daacbcdec2d302eef5ed37a83f0dd51d6b4c71b78",
+  "environment": {
+    "benchmark_commit": "5746b7d6c47855ce1294bed87329618ff7f1bc31",
+    "checker_sha256": "28ec6cc9cfe05c8b21591526891e0033d937c07ec50bfc23f93a8106fbf5feb7",
+    "dependencies": {
+      "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da",
+      "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+      "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+      "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+      "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+      "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+      "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+      "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+      "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2"
+    },
+    "environment_id": "minif2f-4.24.0",
+    "lake_manifest_sha256": "1f2575b1258dbe5e507b118f94700d94b35edfa7a44d32d9959e164b82f448e7",
+    "lakefile_sha256": "35c584f9220bc20c7b9431ca7adf804815ff8c175dac21030d3c4b6c0c4266e6",
+    "lean_version": "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "mathlib_commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+  },
+  "finished_at": "2026-11-17T20:51:14.204733+00:00",
+  "inputs": {
+    "problems": {
+      "path": "/home/vaibhav/dev/lean_law/Cinder/examples/minif2f/problems.jsonl",
+      "sha256": "cb2272da3eaf0dead1bf22f076f802f2559650930ad01186ad17f9520b8666a8"
+    },
+    "samples": {
+      "path": "/home/vaibhav/dev/lean_law/Cinder/examples/minif2f/samples.jsonl",
+      "sha256": "85f3abed294daaf0ec3461f0f4705c8f30921ae16a8c069fe4ffe862079a8291"
+    }
+  },
+  "machine": {
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "cpu_count": 24,
+    "cpu_model": "Intel(R) Core(TM) Ultra 9 275HX",
+    "hostname": "shadomonarch",
+    "memory_bytes": {
+      "MemTotal": 8023359488,
+      "SwapTotal": 2147483648
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.13.14"
+  },
+  "output": "/home/vaibhav/dev/lean_law/Cinder/artifacts/throughput-v2/measurements.workers-1.jsonl",
+  "output_sha256": "edc5025b991aa48bfa91bddc6bcc5381a38c52be8c1955c6bd3476fb8de85434",
+  "run_id": "766e9344-cd87-4aac-b6e8-c4e1d0f48474",
+  "schema_version": 1,
+  "started_at": "2026-11-17T20:50:24.803321+00:00",
+  "status": "complete",
+  "verdict_counts": {
+    "pass": 10
+  },
+  "worker_count": 1
+}
