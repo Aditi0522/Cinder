@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[2]
 MF = ROOT / "benchmarks" / "minif2f"
 BENCH = "minif2f-lean4"
 EXPECTED = {"valid": 244, "test": 244}
-OPEN, CLOSE = "([{⟨", ")]}⟩"
+OPEN, CLOSE = "([{⟨⦃", ")]}⟩⦄"
 
 
 def file_sha(path) -> str:
@@ -59,22 +59,49 @@ def verify_pins(mf: Path = MF) -> dict:
         if file_sha(up / rel) != digest:
             raise ValueError(f"hash mismatch: upstream/{rel}")
     derived = pins.get("derived", {})
-    if "extracted.jsonl" not in derived:
-        raise ValueError("pins.json has no derived hash for extracted.jsonl (rerun utils/make_pins.py)")
-    for rel, digest in derived.items():
-        if file_sha(mf / rel) != digest:
-            raise ValueError(f"derived file changed since pinning: {rel}")
+    if "extracted_jsonl" not in derived:
+        raise ValueError("pins.json has no derived entry for extracted_jsonl (rerun utils/make_pins.py)")
+    for key, entry in derived.items():
+        path = ROOT / entry["path"]
+        if not path.is_file() or file_sha(path) != entry["sha256"]:
+            raise ValueError(f"derived file missing or changed since pinning: {key}")
     for row in read_jsonl(mf / "extracted.jsonl"):
         if file_sha(up / row["source_path"]) != row["source_sha256"]:
             raise ValueError(f"{row['name']}: source differs from extracted.jsonl")
     return pins
 
 
+def strip_comments(text: str) -> str:
+    """Remove Lean line (`--`) and nested block (`/- -/`) comments; newlines are kept."""
+    out, i, depth = [], 0, 0
+    while i < len(text):
+        two = text[i:i + 2]
+        if depth == 0 and two == "--":
+            j = text.find("\n", i)
+            i = len(text) if j == -1 else j
+        elif two == "/-":
+            depth += 1
+            i += 2
+        elif depth and two == "-/":
+            depth -= 1
+            i += 2
+        elif depth:
+            i += 1
+        else:
+            out.append(text[i])
+            i += 1
+    if depth:
+        raise ValueError("unterminated block comment")
+    return "".join(out)
+
+
 def split_declaration(decl: str, name: str) -> tuple[str, str]:
     """Split `theorem NAME <binders> : <goal>` at the first top-level colon.
 
-    Binders must be bracket groups only; the split must round-trip exactly.
+    Comments are removed first. Binders must be bracket groups only; the split must
+    round-trip exactly (ignoring whitespace) against the comment-free declaration.
     """
+    decl = strip_comments(decl)
     prefix = f"theorem {name}"
     if not decl.startswith(prefix):
         raise ValueError(f"{name}: declaration does not start with its theorem name")
@@ -105,7 +132,7 @@ def preamble_from_header(header: str) -> str:
     keep = []
     for line in header.splitlines():
         s = line.strip()
-        if not s or s.startswith("import ") or s.startswith("set_option maxHeartbeats"):
+        if not s or s.startswith(("import ", "set_option maxHeartbeats")):
             continue
         if not s.startswith("open "):
             raise ValueError(f"unexpected header line: {s}")
@@ -133,6 +160,7 @@ def to_problem(row: dict, environment_id: str, commit: str, preamble: str,
             "source_sha256": row["source_sha256"],
             "header_sha256": row["header_sha256"],
             "statement_sha256": row["statement_sha256"],
+            "comments_stripped": strip_comments(row["declaration"]) != row["declaration"],
         },
     )
 
@@ -149,6 +177,8 @@ def read_ledger(mf: Path, names: set, allow_pending: bool = False) -> dict:
             raise ValueError(f"duplicate ledger row: {pid}")
         seen.add(pid)
         if decision == "exclude":
+            if any(str(x).upper().startswith("REVIEWER_") for x in r.get("reviewers", [])):
+                raise ValueError(f"{pid}: placeholder reviewer names")
             if len(set(r.get("reviewers", []))) < 2 or not r.get("notes"):
                 raise ValueError(f"{pid}: exclusion needs two reviewers and a reason in notes")
             excluded[pid] = r["notes"]

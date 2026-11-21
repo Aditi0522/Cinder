@@ -8,7 +8,6 @@ import json
 import sys
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "benchmarks/minif2f/extracted.jsonl"
 

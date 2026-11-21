@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Extract miniF2F statements from the pinned upstream checkout. Run from the repo root."""
-import hashlib, json, re, subprocess
+import hashlib
+import json
+import re
+import subprocess
 from pathlib import Path
 
 UP = Path("benchmarks/minif2f/upstream")
 OUT = Path("benchmarks/minif2f/extracted.jsonl")
 SPLITS = {"Valid": "valid", "Test": "test"}
 EXPECTED = {"valid": 244, "test": 244}
-THEOREM = re.compile(r"^theorem[ \t]+(\S+)", re.M)
+THEOREM = re.compile(r"^theorem[ \t]+(\S+)", re.MULTILINE)
 PROOF = re.compile(r":=[ \t\r\n]*by[ \t\r\n]+sorry[ \t\r\n]*\Z")
 
 def sha(b: bytes) -> str:

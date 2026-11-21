@@ -12,7 +12,14 @@ D1 = (
     "  (h₃ : z ≠ x) (h₄ : x + y + z = a) (h₅ : x ^ 2 + y ^ 2 + z ^ 2 = b ^ 2) (h₆ : x * y = z ^ 2) :\n"
     "  0 < a ∧ b ^ 2 < a ^ 2 ∧ a ^ 2 < 3 * b ^ 2"
 )
-BASE = dict(header=HEADER, source_path="x", theorem_line=7, source_sha256="a", header_sha256="b", statement_sha256="c")
+BASE = {
+    "header": HEADER,
+    "source_path": "x",
+    "theorem_line": 7,
+    "source_sha256": "a",
+    "header_sha256": "b",
+    "statement_sha256": "c",
+}
 ROWS = [
     dict(BASE, name="imo_1961_p1", split="valid", declaration=D1),
     dict(BASE, name="t_nobinders", split="valid", declaration="theorem t_nobinders :\n  (2 : ℕ) + 2 = 4"),
@@ -52,6 +59,24 @@ def test_split_without_binders():
 def test_colon_inside_goal_is_not_the_separator():
     b, g = m.split_declaration("theorem t (s : Set ℕ) : ∀ n : ℕ, n ∈ s", "t")
     assert b == "(s : Set ℕ)" and g == "∀ n : ℕ, n ∈ s"
+
+
+def test_comments_between_binders_are_stripped():
+    decl = (
+        "theorem t (S : Finset ℕ)\n"
+        "  -- note: we use (n^2 + 2 - 3 * n) over x because it truncates\n"
+        "  (h₀ : S.card = 1) :\n"
+        "  /- block (comment) -/ S.card = 1"
+    )
+    binders, goal = m.split_declaration(decl, "t")
+    assert "note" not in binders and "block" not in goal
+    assert binders.startswith("(S : Finset ℕ)") and binders.endswith("(h₀ : S.card = 1)")
+    assert goal == "S.card = 1"
+
+
+def test_unterminated_block_comment_rejected():
+    with pytest.raises(ValueError):
+        m.strip_comments("theorem t : ℕ /- oops")
 
 
 def test_split_rejects_malformed():
@@ -137,6 +162,11 @@ REAL = m.MF / "extracted.jsonl"
 def test_all_real_statements_split_and_roundtrip():
     rows = m.read_jsonl(REAL)
     assert len(rows) == 488
+    failures = []
     for r in rows:
-        _, goal = m.split_declaration(r["declaration"], r["name"])
-        assert goal
+        try:
+            _, goal = m.split_declaration(r["declaration"], r["name"])
+            assert goal
+        except (ValueError, AssertionError) as error:
+            failures.append(f"{r['name']}: {error}")
+    assert not failures, failures

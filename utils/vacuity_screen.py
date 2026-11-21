@@ -18,7 +18,12 @@ Parameters used for the published results: chunk 25, heartbeats 200000, 2 jobs.
 Controls vac_real / vac_conj_real must be proven_vacuous and ctrl_clean
 inconclusive, otherwise the script exits non-zero.
 """
-import argparse, json, os, re, subprocess, sys
+import argparse
+import json
+import os
+import re
+import subprocess
+import sys
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
