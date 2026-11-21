@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "controls:2026-11-19T12:16:11.304526+00:00",
+  "started_at": "2026-11-19T12:16:11.304526+00:00",
+  "dataset": {
+    "input": "/kaggle/working/audit/controls.jsonl",
+    "resolved_name": "controls",
+    "format": "jsonl",
+    "split": null,
+    "header_file": null,
+    "total_hint": 6
+  },
+  "execution": {
+    "workspace": ".",
+    "toolchain": "leanprover/lean4:v4.30.0-rc2",
+    "backend": "subprocess",
+    "workers": 1,
+    "timeout": 120,
+    "output_dir": "/kaggle/working/audit/raw/controls",
+    "resuming": false
+  }
+}

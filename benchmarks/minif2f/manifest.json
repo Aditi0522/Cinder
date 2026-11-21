@@ -1,0 +1,2083 @@
+{
+  "annotations": {
+    "minif2f.aimeII_2020_p6": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.aime_1983_p1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        },
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.aime_1983_p3": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.aime_1983_p9": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.aime_1984_p1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.aime_1988_p4": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.aime_1991_p9": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.aime_1997_p11": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.algebra_amgm_prod1toneq1_sum1tongeqn": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.algebra_amgm_sum1toneqn_prod1tonleq1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.algebra_cubrtrp1oncubrtreq3_rcubp1onrcubeq5778": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.algebra_ineq_nto1onlt2m1on": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.algebra_sum1onsqrt2to1onsqrt10000lt198": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12_2000_p6": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12_2001_p5": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        },
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": "set_option maxRecDepth 100000"
+    },
+    "minif2f.amc12a_2002_p21": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2003_p1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        },
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2003_p25": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2008_p4": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2009_p25": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2019_p12": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2019_p21": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2019_p9": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2020_p13": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        },
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "proven",
+          "severity": "ERROR"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2020_p7": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        },
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2021_p3": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12a_2021_p9": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12b_2002_p11": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12b_2002_p3": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12b_2021_p18": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.amc12b_2021_p3": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1964_p1_1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1965_p1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1966_p4": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1967_p3": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1968_p5_1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1969_p2": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1974_p3": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1978_p5": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1979_p1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1981_p6": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1985_p6": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_1987_p6": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imo_2001_p6": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.imosl_2007_algebra_p6": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.induction_divisibility_9div10tonm1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.induction_pprime_pdvdapowpma": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.induction_prod1p1onk3le3m1onn": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.induction_seq_mul2pnp1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.induction_sum2kp1npqsqm1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        },
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.induction_sum_1oktkp1": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.induction_sum_odd": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.induction_sumkexp3eqsumksq": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_139": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Potential Division by Zero",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_158": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_17": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_170": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "proven",
+          "severity": "ERROR"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_208": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "proven",
+          "severity": "ERROR"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_275": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "proven",
+          "severity": "ERROR"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_282": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "proven",
+          "severity": "ERROR"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_289": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_314": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "proven",
+          "severity": "ERROR"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_332": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_342": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_392": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        },
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_433": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_493": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_547": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_algebra_69": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_109": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_127": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_149": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_211": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_237": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_257": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        },
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_3": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_328": {
+      "coverage": "unaudited",
+      "final_status": "unaudited_linter_error",
+      "flags": [],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_343": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_466": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_521": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_530": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Integer Division Truncation",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_543": {
+      "coverage": "unaudited",
+      "final_status": "unaudited_timeout",
+      "flags": [],
+      "transform": null
+    },
+    "minif2f.mathd_numbertheory_618": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Truncated Nat Subtraction",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.numbertheory_2pownm1prime_nprime": {
+      "coverage": "unaudited",
+      "final_status": "unaudited_timeout",
+      "flags": [],
+      "transform": null
+    },
+    "minif2f.numbertheory_3pow2pownm1mod2pownp3eq2pownp2": {
+      "coverage": "unaudited",
+      "final_status": "unaudited_linter_abort",
+      "flags": [],
+      "transform": null
+    },
+    "minif2f.numbertheory_aneqprodakp4_anmsqrtanp1eq2": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "0-Indexed Range",
+          "confidence": "maybe",
+          "severity": "INFO"
+        },
+        {
+          "category": "Analytic Domain Totalization",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    },
+    "minif2f.numbertheory_prmdvsneqnsqmodpeq0": {
+      "coverage": "audited",
+      "final_status": "findings",
+      "flags": [
+        {
+          "category": "Modulo Edge Case",
+          "confidence": "maybe",
+          "severity": "WARNING"
+        }
+      ],
+      "transform": null
+    }
+  },
+  "benchmark": "minif2f-lean4",
+  "counts": {
+    "test": {
+      "excluded": 3,
+      "included": 241
+    },
+    "valid": {
+      "excluded": 1,
+      "included": 243
+    }
+  },
+  "environment_id": "lean-core-4.24.0",
+  "excluded": {
+    "minif2f.mathd_algebra_208": "Lean elaboration confirms the exponent 1/3 is Nat, so it evaluates to 0. The expression (1000000 : ℝ) ^ (1/3) evaluates to 1 instead of the intended cube root 100, changing the original mathematical statement.",
+    "minif2f.mathd_algebra_275": "Proven vacuous: the exfalso screen closes the statement with kernel-checked arithmetic tactics, so the hypotheses are contradictory and any conclusion is provable. The formalization does not preserve the original problem.",
+    "minif2f.mathd_algebra_282": "Lean elaboration confirms the exponent 1/3 is Nat, so 8 ^ (1/3) evaluates to 1 instead of the intended cube root 2. This changes an argument to the function f and therefore changes the original problem.",
+    "minif2f.mathd_algebra_314": "The expression is inferred in Nat, so both occurrences of 1/4 evaluate to 0. With n = 11, the statement reduces to 0 = 0 rather than the intended fractional identity."
+  },
+  "files": {
+    "problems.test.jsonl": "b06a57cdf2bb7bc7908a7fdfde7e2f83d1c1e1cadd90fc0cc2f8c91363007207",
+    "problems.valid.jsonl": "cee70edae086b3f7594319d51d91ff33f6f4020ab6f2f29084c8ac74a02c3d4a",
+    "problems_excluded.jsonl": "699dcc6aebe39b65bdc3399194ccca41fd033944360a138d39c8ed67caf41808"
+  },
+  "imports": [
+    "Mathlib"
+  ],
+  "included": {
+    "test": [
+      "minif2f.aime_1983_p1",
+      "minif2f.aime_1983_p2",
+      "minif2f.aime_1983_p3",
+      "minif2f.aime_1984_p1",
+      "minif2f.aime_1984_p7",
+      "minif2f.aime_1987_p5",
+      "minif2f.aime_1988_p8",
+      "minif2f.aime_1989_p8",
+      "minif2f.aime_1990_p15",
+      "minif2f.aime_1990_p4",
+      "minif2f.aime_1991_p9",
+      "minif2f.aime_1994_p3",
+      "minif2f.aime_1995_p7",
+      "minif2f.aime_1997_p9",
+      "minif2f.aime_1999_p11",
+      "minif2f.algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feqn10_zeq7",
+      "minif2f.algebra_9onxpypzleqsum2onxpy",
+      "minif2f.algebra_abpbcpcageq3_sumaonsqrtapbgeq3onsqrt2",
+      "minif2f.algebra_absapbon1pabsapbleqsumabsaon1pabsa",
+      "minif2f.algebra_absxm1pabsxpabsxp1eqxp2_0leqxleq1",
+      "minif2f.algebra_amgm_sum1toneqn_prod1tonleq1",
+      "minif2f.algebra_amgm_sumasqdivbgeqsuma",
+      "minif2f.algebra_apbmpcneq0_aeq0anbeq0anceq0",
+      "minif2f.algebra_apbon2pownleqapownpbpowon2",
+      "minif2f.algebra_apbpceq2_abpbcpcaeq1_aleq1on3anbleq1ancleq4on3",
+      "minif2f.algebra_bleqa_apbon2msqrtableqambsqon8b",
+      "minif2f.algebra_cubrtrp1oncubrtreq3_rcubp1onrcubeq5778",
+      "minif2f.algebra_ineq_nto1onlt2m1on",
+      "minif2f.algebra_others_exirrpowirrrat",
+      "minif2f.algebra_sqineq_at2malt1",
+      "minif2f.algebra_sqineq_unitcircatbpabsamblt1",
+      "minif2f.algebra_sqineq_unitcircatbpamblt1",
+      "minif2f.algebra_sum1onsqrt2to1onsqrt10000lt198",
+      "minif2f.amc12_2000_p1",
+      "minif2f.amc12_2000_p12",
+      "minif2f.amc12_2000_p20",
+      "minif2f.amc12_2000_p6",
+      "minif2f.amc12_2001_p21",
+      "minif2f.amc12_2001_p5",
+      "minif2f.amc12a_2002_p13",
+      "minif2f.amc12a_2002_p6",
+      "minif2f.amc12a_2003_p23",
+      "minif2f.amc12a_2003_p5",
+      "minif2f.amc12a_2008_p25",
+      "minif2f.amc12a_2009_p6",
+      "minif2f.amc12a_2009_p7",
+      "minif2f.amc12a_2013_p4",
+      "minif2f.amc12a_2019_p12",
+      "minif2f.amc12a_2020_p10",
+      "minif2f.amc12a_2020_p15",
+      "minif2f.amc12a_2020_p25",
+      "minif2f.amc12a_2020_p4",
+      "minif2f.amc12a_2020_p7",
+      "minif2f.amc12a_2020_p9",
+      "minif2f.amc12a_2021_p12",
+      "minif2f.amc12a_2021_p14",
+      "minif2f.amc12a_2021_p18",
+      "minif2f.amc12a_2021_p19",
+      "minif2f.amc12a_2021_p22",
+      "minif2f.amc12a_2021_p25",
+      "minif2f.amc12a_2021_p3",
+      "minif2f.amc12a_2021_p8",
+      "minif2f.amc12a_2021_p9",
+      "minif2f.amc12b_2002_p19",
+      "minif2f.amc12b_2002_p2",
+      "minif2f.amc12b_2002_p4",
+      "minif2f.amc12b_2002_p7",
+      "minif2f.amc12b_2020_p13",
+      "minif2f.amc12b_2020_p2",
+      "minif2f.amc12b_2020_p21",
+      "minif2f.amc12b_2020_p22",
+      "minif2f.amc12b_2020_p6",
+      "minif2f.amc12b_2021_p1",
+      "minif2f.amc12b_2021_p13",
+      "minif2f.amc12b_2021_p18",
+      "minif2f.amc12b_2021_p3",
+      "minif2f.amc12b_2021_p4",
+      "minif2f.amc12b_2021_p9",
+      "minif2f.imo_1959_p1",
+      "minif2f.imo_1960_p2",
+      "minif2f.imo_1962_p2",
+      "minif2f.imo_1963_p5",
+      "minif2f.imo_1964_p2",
+      "minif2f.imo_1965_p2",
+      "minif2f.imo_1968_p5_1",
+      "minif2f.imo_1969_p2",
+      "minif2f.imo_1974_p3",
+      "minif2f.imo_1977_p6",
+      "minif2f.imo_1981_p6",
+      "minif2f.imo_1982_p1",
+      "minif2f.imo_1983_p6",
+      "minif2f.imo_1984_p6",
+      "minif2f.imo_1985_p6",
+      "minif2f.imo_1992_p1",
+      "minif2f.imo_1997_p5",
+      "minif2f.imo_2001_p6",
+      "minif2f.imo_2019_p1",
+      "minif2f.imosl_2007_algebra_p6",
+      "minif2f.induction_11div10tonmn1ton",
+      "minif2f.induction_12dvd4expnp1p20",
+      "minif2f.induction_1pxpownlt1pnx",
+      "minif2f.induction_nfactltnexpnm1ngt3",
+      "minif2f.induction_pord1p1on2powklt5on2",
+      "minif2f.induction_pprime_pdvdapowpma",
+      "minif2f.induction_prod1p1onk3le3m1onn",
+      "minif2f.induction_sumkexp3eqsumksq",
+      "minif2f.mathd_algebra_107",
+      "minif2f.mathd_algebra_113",
+      "minif2f.mathd_algebra_114",
+      "minif2f.mathd_algebra_125",
+      "minif2f.mathd_algebra_129",
+      "minif2f.mathd_algebra_137",
+      "minif2f.mathd_algebra_139",
+      "minif2f.mathd_algebra_141",
+      "minif2f.mathd_algebra_142",
+      "minif2f.mathd_algebra_143",
+      "minif2f.mathd_algebra_148",
+      "minif2f.mathd_algebra_153",
+      "minif2f.mathd_algebra_156",
+      "minif2f.mathd_algebra_158",
+      "minif2f.mathd_algebra_160",
+      "minif2f.mathd_algebra_17",
+      "minif2f.mathd_algebra_170",
+      "minif2f.mathd_algebra_171",
+      "minif2f.mathd_algebra_176",
+      "minif2f.mathd_algebra_184",
+      "minif2f.mathd_algebra_188",
+      "minif2f.mathd_algebra_196",
+      "minif2f.mathd_algebra_209",
+      "minif2f.mathd_algebra_215",
+      "minif2f.mathd_algebra_24",
+      "minif2f.mathd_algebra_246",
+      "minif2f.mathd_algebra_263",
+      "minif2f.mathd_algebra_270",
+      "minif2f.mathd_algebra_276",
+      "minif2f.mathd_algebra_288",
+      "minif2f.mathd_algebra_289",
+      "minif2f.mathd_algebra_293",
+      "minif2f.mathd_algebra_296",
+      "minif2f.mathd_algebra_302",
+      "minif2f.mathd_algebra_304",
+      "minif2f.mathd_algebra_313",
+      "minif2f.mathd_algebra_320",
+      "minif2f.mathd_algebra_329",
+      "minif2f.mathd_algebra_33",
+      "minif2f.mathd_algebra_332",
+      "minif2f.mathd_algebra_338",
+      "minif2f.mathd_algebra_342",
+      "minif2f.mathd_algebra_346",
+      "minif2f.mathd_algebra_354",
+      "minif2f.mathd_algebra_359",
+      "minif2f.mathd_algebra_362",
+      "minif2f.mathd_algebra_388",
+      "minif2f.mathd_algebra_392",
+      "minif2f.mathd_algebra_398",
+      "minif2f.mathd_algebra_400",
+      "minif2f.mathd_algebra_412",
+      "minif2f.mathd_algebra_419",
+      "minif2f.mathd_algebra_427",
+      "minif2f.mathd_algebra_432",
+      "minif2f.mathd_algebra_44",
+      "minif2f.mathd_algebra_440",
+      "minif2f.mathd_algebra_441",
+      "minif2f.mathd_algebra_452",
+      "minif2f.mathd_algebra_459",
+      "minif2f.mathd_algebra_478",
+      "minif2f.mathd_algebra_484",
+      "minif2f.mathd_algebra_487",
+      "minif2f.mathd_algebra_513",
+      "minif2f.mathd_algebra_598",
+      "minif2f.mathd_algebra_756",
+      "minif2f.mathd_algebra_76",
+      "minif2f.mathd_algebra_80",
+      "minif2f.mathd_numbertheory_100",
+      "minif2f.mathd_numbertheory_1124",
+      "minif2f.mathd_numbertheory_12",
+      "minif2f.mathd_numbertheory_127",
+      "minif2f.mathd_numbertheory_135",
+      "minif2f.mathd_numbertheory_150",
+      "minif2f.mathd_numbertheory_175",
+      "minif2f.mathd_numbertheory_185",
+      "minif2f.mathd_numbertheory_207",
+      "minif2f.mathd_numbertheory_212",
+      "minif2f.mathd_numbertheory_222",
+      "minif2f.mathd_numbertheory_227",
+      "minif2f.mathd_numbertheory_229",
+      "minif2f.mathd_numbertheory_233",
+      "minif2f.mathd_numbertheory_234",
+      "minif2f.mathd_numbertheory_235",
+      "minif2f.mathd_numbertheory_237",
+      "minif2f.mathd_numbertheory_239",
+      "minif2f.mathd_numbertheory_247",
+      "minif2f.mathd_numbertheory_254",
+      "minif2f.mathd_numbertheory_277",
+      "minif2f.mathd_numbertheory_293",
+      "minif2f.mathd_numbertheory_296",
+      "minif2f.mathd_numbertheory_299",
+      "minif2f.mathd_numbertheory_3",
+      "minif2f.mathd_numbertheory_314",
+      "minif2f.mathd_numbertheory_320",
+      "minif2f.mathd_numbertheory_321",
+      "minif2f.mathd_numbertheory_328",
+      "minif2f.mathd_numbertheory_34",
+      "minif2f.mathd_numbertheory_341",
+      "minif2f.mathd_numbertheory_342",
+      "minif2f.mathd_numbertheory_343",
+      "minif2f.mathd_numbertheory_345",
+      "minif2f.mathd_numbertheory_353",
+      "minif2f.mathd_numbertheory_427",
+      "minif2f.mathd_numbertheory_430",
+      "minif2f.mathd_numbertheory_435",
+      "minif2f.mathd_numbertheory_447",
+      "minif2f.mathd_numbertheory_451",
+      "minif2f.mathd_numbertheory_457",
+      "minif2f.mathd_numbertheory_483",
+      "minif2f.mathd_numbertheory_495",
+      "minif2f.mathd_numbertheory_5",
+      "minif2f.mathd_numbertheory_517",
+      "minif2f.mathd_numbertheory_521",
+      "minif2f.mathd_numbertheory_541",
+      "minif2f.mathd_numbertheory_551",
+      "minif2f.mathd_numbertheory_552",
+      "minif2f.mathd_numbertheory_559",
+      "minif2f.mathd_numbertheory_582",
+      "minif2f.mathd_numbertheory_618",
+      "minif2f.mathd_numbertheory_66",
+      "minif2f.mathd_numbertheory_711",
+      "minif2f.mathd_numbertheory_728",
+      "minif2f.mathd_numbertheory_764",
+      "minif2f.mathd_numbertheory_765",
+      "minif2f.mathd_numbertheory_769",
+      "minif2f.mathd_numbertheory_85",
+      "minif2f.mathd_numbertheory_99",
+      "minif2f.numbertheory_2pownm1prime_nprime",
+      "minif2f.numbertheory_3pow2pownm1mod2pownp3eq2pownp2",
+      "minif2f.numbertheory_4x3m7y3neq2003",
+      "minif2f.numbertheory_aoddbdiv4asqpbsqmod8eq1",
+      "minif2f.numbertheory_exk2powkeqapb2mulbpa2_aeq1",
+      "minif2f.numbertheory_fxeq4powxp6powxp9powx_f2powmdvdf2pown",
+      "minif2f.numbertheory_notEquiv2i2jasqbsqdiv8",
+      "minif2f.numbertheory_x5neqy2p4"
+    ],
+    "valid": [
+      "minif2f.aimeII_2001_p3",
+      "minif2f.aimeII_2020_p6",
+      "minif2f.aimeI_2000_p7",
+      "minif2f.aime_1983_p9",
+      "minif2f.aime_1984_p15",
+      "minif2f.aime_1984_p5",
+      "minif2f.aime_1987_p8",
+      "minif2f.aime_1988_p3",
+      "minif2f.aime_1988_p4",
+      "minif2f.aime_1990_p2",
+      "minif2f.aime_1991_p1",
+      "minif2f.aime_1991_p6",
+      "minif2f.aime_1994_p4",
+      "minif2f.aime_1996_p5",
+      "minif2f.aime_1997_p11",
+      "minif2f.algebra_2complexrootspoly_xsqp49eqxp7itxpn7i",
+      "minif2f.algebra_2rootsintpoly_am10tap11eqasqpam110",
+      "minif2f.algebra_2rootspoly_apatapbeq2asqp2ab",
+      "minif2f.algebra_2varlineareq_xpeeq7_2xpeeq3_eeq11_xeqn4",
+      "minif2f.algebra_3rootspoly_amdtamctambeqnasqmbpctapcbtdpasqmbpctapcbta",
+      "minif2f.algebra_amgm_faxinrrp2msqrt2geq2mxm1div2x",
+      "minif2f.algebra_amgm_prod1toneq1_sum1tongeqn",
+      "minif2f.algebra_amgm_sqrtxymulxmyeqxpy_xpygeq4",
+      "minif2f.algebra_amgm_sumasqdivbsqgeqsumbdiva",
+      "minif2f.algebra_apb4leq8ta4pb4",
+      "minif2f.algebra_binomnegdiscrineq_10alt28asqp1",
+      "minif2f.algebra_manipexpr_2erprsqpesqeqnrpnesq",
+      "minif2f.algebra_manipexpr_apbeq2cceqiacpbceqm2",
+      "minif2f.algebra_sqineq_2at2pclta2c2p41pc",
+      "minif2f.algebra_sqineq_2unitcircatblt1",
+      "minif2f.algebra_sqineq_36azm9asqle36zsq",
+      "minif2f.algebra_sqineq_4bap1lt4bsqpap1sq",
+      "minif2f.algebra_xmysqpymzsqpzmxsqeqxyz_xpypzp6dvdx3y3z3",
+      "minif2f.amc12_2000_p11",
+      "minif2f.amc12_2000_p15",
+      "minif2f.amc12_2000_p5",
+      "minif2f.amc12_2001_p2",
+      "minif2f.amc12_2001_p9",
+      "minif2f.amc12a_2002_p1",
+      "minif2f.amc12a_2002_p12",
+      "minif2f.amc12a_2002_p21",
+      "minif2f.amc12a_2003_p1",
+      "minif2f.amc12a_2003_p24",
+      "minif2f.amc12a_2003_p25",
+      "minif2f.amc12a_2008_p15",
+      "minif2f.amc12a_2008_p2",
+      "minif2f.amc12a_2008_p4",
+      "minif2f.amc12a_2008_p8",
+      "minif2f.amc12a_2009_p15",
+      "minif2f.amc12a_2009_p2",
+      "minif2f.amc12a_2009_p25",
+      "minif2f.amc12a_2009_p5",
+      "minif2f.amc12a_2009_p9",
+      "minif2f.amc12a_2010_p10",
+      "minif2f.amc12a_2010_p11",
+      "minif2f.amc12a_2010_p22",
+      "minif2f.amc12a_2011_p18",
+      "minif2f.amc12a_2013_p7",
+      "minif2f.amc12a_2013_p8",
+      "minif2f.amc12a_2015_p10",
+      "minif2f.amc12a_2016_p2",
+      "minif2f.amc12a_2016_p3",
+      "minif2f.amc12a_2017_p2",
+      "minif2f.amc12a_2017_p7",
+      "minif2f.amc12a_2019_p21",
+      "minif2f.amc12a_2019_p9",
+      "minif2f.amc12a_2020_p13",
+      "minif2f.amc12a_2020_p21",
+      "minif2f.amc12a_2021_p7",
+      "minif2f.amc12b_2002_p11",
+      "minif2f.amc12b_2002_p3",
+      "minif2f.amc12b_2002_p6",
+      "minif2f.amc12b_2003_p17",
+      "minif2f.amc12b_2003_p6",
+      "minif2f.amc12b_2003_p9",
+      "minif2f.amc12b_2004_p3",
+      "minif2f.amc12b_2020_p5",
+      "minif2f.amc12b_2021_p21",
+      "minif2f.imo_1961_p1",
+      "minif2f.imo_1962_p4",
+      "minif2f.imo_1964_p1_1",
+      "minif2f.imo_1964_p1_2",
+      "minif2f.imo_1965_p1",
+      "minif2f.imo_1966_p4",
+      "minif2f.imo_1966_p5",
+      "minif2f.imo_1967_p3",
+      "minif2f.imo_1973_p3",
+      "minif2f.imo_1974_p5",
+      "minif2f.imo_1977_p5",
+      "minif2f.imo_1978_p5",
+      "minif2f.imo_1979_p1",
+      "minif2f.imo_1984_p2",
+      "minif2f.imo_1987_p4",
+      "minif2f.imo_1987_p6",
+      "minif2f.imo_1988_p6",
+      "minif2f.imo_1990_p3",
+      "minif2f.imo_1993_p5",
+      "minif2f.imo_2006_p3",
+      "minif2f.induction_divisibility_3div2tooddnp1",
+      "minif2f.induction_divisibility_3divnto3m2n",
+      "minif2f.induction_divisibility_9div10tonm1",
+      "minif2f.induction_ineq_nsqlefactn",
+      "minif2f.induction_seq_mul2pnp1",
+      "minif2f.induction_sum2kp1npqsqm1",
+      "minif2f.induction_sum_1oktkp1",
+      "minif2f.induction_sum_odd",
+      "minif2f.mathd_algebra_10",
+      "minif2f.mathd_algebra_101",
+      "minif2f.mathd_algebra_104",
+      "minif2f.mathd_algebra_109",
+      "minif2f.mathd_algebra_11",
+      "minif2f.mathd_algebra_110",
+      "minif2f.mathd_algebra_116",
+      "minif2f.mathd_algebra_119",
+      "minif2f.mathd_algebra_123",
+      "minif2f.mathd_algebra_126",
+      "minif2f.mathd_algebra_13",
+      "minif2f.mathd_algebra_131",
+      "minif2f.mathd_algebra_132",
+      "minif2f.mathd_algebra_140",
+      "minif2f.mathd_algebra_144",
+      "minif2f.mathd_algebra_149",
+      "minif2f.mathd_algebra_15",
+      "minif2f.mathd_algebra_151",
+      "minif2f.mathd_algebra_159",
+      "minif2f.mathd_algebra_181",
+      "minif2f.mathd_algebra_182",
+      "minif2f.mathd_algebra_185",
+      "minif2f.mathd_algebra_190",
+      "minif2f.mathd_algebra_192",
+      "minif2f.mathd_algebra_206",
+      "minif2f.mathd_algebra_214",
+      "minif2f.mathd_algebra_22",
+      "minif2f.mathd_algebra_224",
+      "minif2f.mathd_algebra_234",
+      "minif2f.mathd_algebra_245",
+      "minif2f.mathd_algebra_247",
+      "minif2f.mathd_algebra_251",
+      "minif2f.mathd_algebra_267",
+      "minif2f.mathd_algebra_28",
+      "minif2f.mathd_algebra_31",
+      "minif2f.mathd_algebra_323",
+      "minif2f.mathd_algebra_327",
+      "minif2f.mathd_algebra_35",
+      "minif2f.mathd_algebra_37",
+      "minif2f.mathd_algebra_393",
+      "minif2f.mathd_algebra_405",
+      "minif2f.mathd_algebra_410",
+      "minif2f.mathd_algebra_421",
+      "minif2f.mathd_algebra_422",
+      "minif2f.mathd_algebra_43",
+      "minif2f.mathd_algebra_433",
+      "minif2f.mathd_algebra_437",
+      "minif2f.mathd_algebra_451",
+      "minif2f.mathd_algebra_455",
+      "minif2f.mathd_algebra_462",
+      "minif2f.mathd_algebra_48",
+      "minif2f.mathd_algebra_480",
+      "minif2f.mathd_algebra_482",
+      "minif2f.mathd_algebra_493",
+      "minif2f.mathd_algebra_509",
+      "minif2f.mathd_algebra_51",
+      "minif2f.mathd_algebra_510",
+      "minif2f.mathd_algebra_536",
+      "minif2f.mathd_algebra_547",
+      "minif2f.mathd_algebra_55",
+      "minif2f.mathd_algebra_568",
+      "minif2f.mathd_algebra_59",
+      "minif2f.mathd_algebra_616",
+      "minif2f.mathd_algebra_67",
+      "minif2f.mathd_algebra_69",
+      "minif2f.mathd_algebra_73",
+      "minif2f.mathd_algebra_77",
+      "minif2f.mathd_algebra_89",
+      "minif2f.mathd_algebra_96",
+      "minif2f.mathd_numbertheory_101",
+      "minif2f.mathd_numbertheory_102",
+      "minif2f.mathd_numbertheory_109",
+      "minif2f.mathd_numbertheory_110",
+      "minif2f.mathd_numbertheory_126",
+      "minif2f.mathd_numbertheory_13",
+      "minif2f.mathd_numbertheory_132",
+      "minif2f.mathd_numbertheory_136",
+      "minif2f.mathd_numbertheory_149",
+      "minif2f.mathd_numbertheory_155",
+      "minif2f.mathd_numbertheory_156",
+      "minif2f.mathd_numbertheory_169",
+      "minif2f.mathd_numbertheory_188",
+      "minif2f.mathd_numbertheory_198",
+      "minif2f.mathd_numbertheory_200",
+      "minif2f.mathd_numbertheory_202",
+      "minif2f.mathd_numbertheory_211",
+      "minif2f.mathd_numbertheory_22",
+      "minif2f.mathd_numbertheory_221",
+      "minif2f.mathd_numbertheory_232",
+      "minif2f.mathd_numbertheory_236",
+      "minif2f.mathd_numbertheory_24",
+      "minif2f.mathd_numbertheory_252",
+      "minif2f.mathd_numbertheory_257",
+      "minif2f.mathd_numbertheory_269",
+      "minif2f.mathd_numbertheory_284",
+      "minif2f.mathd_numbertheory_30",
+      "minif2f.mathd_numbertheory_301",
+      "minif2f.mathd_numbertheory_303",
+      "minif2f.mathd_numbertheory_32",
+      "minif2f.mathd_numbertheory_326",
+      "minif2f.mathd_numbertheory_33",
+      "minif2f.mathd_numbertheory_335",
+      "minif2f.mathd_numbertheory_35",
+      "minif2f.mathd_numbertheory_37",
+      "minif2f.mathd_numbertheory_370",
+      "minif2f.mathd_numbertheory_403",
+      "minif2f.mathd_numbertheory_405",
+      "minif2f.mathd_numbertheory_412",
+      "minif2f.mathd_numbertheory_42",
+      "minif2f.mathd_numbertheory_43",
+      "minif2f.mathd_numbertheory_45",
+      "minif2f.mathd_numbertheory_458",
+      "minif2f.mathd_numbertheory_461",
+      "minif2f.mathd_numbertheory_466",
+      "minif2f.mathd_numbertheory_48",
+      "minif2f.mathd_numbertheory_530",
+      "minif2f.mathd_numbertheory_543",
+      "minif2f.mathd_numbertheory_629",
+      "minif2f.mathd_numbertheory_64",
+      "minif2f.mathd_numbertheory_640",
+      "minif2f.mathd_numbertheory_668",
+      "minif2f.mathd_numbertheory_690",
+      "minif2f.mathd_numbertheory_709",
+      "minif2f.mathd_numbertheory_739",
+      "minif2f.mathd_numbertheory_780",
+      "minif2f.mathd_numbertheory_81",
+      "minif2f.mathd_numbertheory_84",
+      "minif2f.mathd_numbertheory_92",
+      "minif2f.mathd_numbertheory_961",
+      "minif2f.numbertheory_2dvd4expn",
+      "minif2f.numbertheory_aneqprodakp4_anmsqrtanp1eq2",
+      "minif2f.numbertheory_nckeqnm1ckpnm1ckm1",
+      "minif2f.numbertheory_prmdvsneqnsqmodpeq0",
+      "minif2f.numbertheory_sqmod3in01d",
+      "minif2f.numbertheory_sqmod4in01d",
+      "minif2f.numbertheory_sumkmulnckeqnmul2pownm1",
+      "minif2f.numbertheory_xsqpysqintdenomeq"
+    ]
+  },
+  "inputs": {
+    "annotations.jsonl": "b4b80ff736edb70ad6dee65c38fcc1f4cd4d3813b21b16866e6f96cd13b66e3b",
+    "exclusions.jsonl": "bee077a7626bdfe855b12040c7cba0dcc91524789fc9ad4c8a4c9b37eac2b9c0",
+    "extracted.jsonl": "0a6ed8a95d77bc37a74db722fc297d05f59d117e11e0267e386986c2fe549456",
+    "pins.json": "1a416d50c6cc6a92da566a52c3cdd7482b61444cfdfb3d1711249babb4a4e75f"
+  },
+  "preamble": "open BigOperators Real Nat Topology Rat\n",
+  "problem_hashes": {
+    "minif2f.aimeII_2001_p3": "bc6d75d39baf15675bdaf4eec0f70f0a961e13fb47db1d99d41cf289849cf1e1",
+    "minif2f.aimeII_2020_p6": "f6e38c7e0f610585dc3c186922f554810eb886dbd2a58d289d702d7bfc36e995",
+    "minif2f.aimeI_2000_p7": "e35ac305aa07f2834fd3d993d949270bb55d0adabf8484afec1f6b3ac05df65c",
+    "minif2f.aime_1983_p1": "82cb700eebf2fc3bf25eed014cd047aedd51ef2434fb9ae7945ba7eb2c452c52",
+    "minif2f.aime_1983_p2": "ba9e1492ad35e4f19ff06b5d66a0c4bd5e8d3d94fb78c6fb62689ecd2c99f214",
+    "minif2f.aime_1983_p3": "fd177250a3341b3c40c763038569c6d571176f59dbfb5832dea44ec44ee1c100",
+    "minif2f.aime_1983_p9": "c3dd47663c4d97a71f6a84d50463a626b1f95ae2e70cbf9954df8816f19c3369",
+    "minif2f.aime_1984_p1": "ee3ad80e1709edd0d8d6991607ef873d48f0344dc30798523da28f0799b9c74b",
+    "minif2f.aime_1984_p15": "aad6873d150384ea0983f6793f8689d0a57bbb88d6b2d3df171269aae1063439",
+    "minif2f.aime_1984_p5": "ceb3451a511a9393f0c3632e48d56d324dd3248b621acca6dfe8520929a555a0",
+    "minif2f.aime_1984_p7": "3d9c965a9d2194213a47136ceeeb09f1328e3f45b8f25973be5354494923fa65",
+    "minif2f.aime_1987_p5": "909140b63c638d7209e9d582886feccffa85519e801128325aff8d05409afe19",
+    "minif2f.aime_1987_p8": "2ffa6d8102869a13eb0024c72591307d47e7993ae425e4536e40d6f086bbd425",
+    "minif2f.aime_1988_p3": "2283838cf8a912f37bad6047ee89c6a57f65de15da07f02123fb44f09b36a65d",
+    "minif2f.aime_1988_p4": "9e9238eeb9cdc5d52ae6ecf8b9f6c7d0ebd1f8b92af0a283c748f6f176303d49",
+    "minif2f.aime_1988_p8": "32d6dc5fcdb6be4027d1633dc207200419522269ed211653c553ed1bbfdf13e4",
+    "minif2f.aime_1989_p8": "14dc083e8edcfe265f58827406ef3c70368b658f16472d78a4141ab34fed79f0",
+    "minif2f.aime_1990_p15": "ae8a5a94cf4cef874967931f4b225582785f71af7af254f3c7de7a77f80c74d7",
+    "minif2f.aime_1990_p2": "7d46e12d6049c2a8c30c20027729bba16fbdb3b35c9e15390ac90ec6221a0c44",
+    "minif2f.aime_1990_p4": "b8c97f7e9fc8867d40c640a4395e819f835685662fa86a6dd2e77bebd04133f6",
+    "minif2f.aime_1991_p1": "97dc6a324c3d0d9e303e9af55933ff83f9927825d0bce007430029769fe38d6b",
+    "minif2f.aime_1991_p6": "059346b9a55e084965ca7eab2d3649a49552d7248e7de43258737e31b79bcbb5",
+    "minif2f.aime_1991_p9": "873579913b2c672b7f094eb096f862992e77f506219ca249162ce631c3da729b",
+    "minif2f.aime_1994_p3": "fc38af54afea7085f2f684ae63b5147489c9291ae5fbbe0a3c5b3306feb49d3f",
+    "minif2f.aime_1994_p4": "780250699aba2f31b94c578b5451014613ce3f049d79347b0d894185c8c9aeab",
+    "minif2f.aime_1995_p7": "a7c0d8307487b97beb1f44bc7fc5215686b64d53fd50e890e70b6f94dd5288b8",
+    "minif2f.aime_1996_p5": "f854c1da4f64a447ee845834a3ce43e525efe0b8da0ca6b90c7521ba7e3bd2de",
+    "minif2f.aime_1997_p11": "7c92a6a68de9eff5150d5f53ce57fffb8844b01a9e8f1678bd6cc4fa8638d2c0",
+    "minif2f.aime_1997_p9": "af89cdf97d9d28cdbf0e65d4265bae1a8c764dd9f429f69fba17efe3a5b9d911",
+    "minif2f.aime_1999_p11": "594a8d9c8126bffceead3a506eccc4353611a6725f204b073599cadfe6a1e941",
+    "minif2f.algebra_2complexrootspoly_xsqp49eqxp7itxpn7i": "ec3ec41671c602b8e1c47f66848ffb7cf194a3f03ce9be62db5f77dd77566072",
+    "minif2f.algebra_2rootsintpoly_am10tap11eqasqpam110": "81014afba016fb705acf6fd8b32d713564fa5afb6c6247ddc892c08ec797e48b",
+    "minif2f.algebra_2rootspoly_apatapbeq2asqp2ab": "f91d03d5e4c0a460e12ccee6cb47981f469f62fa5639d770e178431f5fdcb887",
+    "minif2f.algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feqn10_zeq7": "bb91ccde8e35b6995072ac0b9df9fa4bbd858a825efb0ff5d250228f41fcdb3d",
+    "minif2f.algebra_2varlineareq_xpeeq7_2xpeeq3_eeq11_xeqn4": "632a76691364c459c1e82508160d856a0a74cecebffaf743e5250022f31e7630",
+    "minif2f.algebra_3rootspoly_amdtamctambeqnasqmbpctapcbtdpasqmbpctapcbta": "020b2dbb136f042a5b134dac1a23cca9c473a0642e4b7bb64027ba5c9ed31526",
+    "minif2f.algebra_9onxpypzleqsum2onxpy": "aa5992858b8efb711df5ce184a53666f7ec2a6e6e63dd4e249cf34a1d3b3d2eb",
+    "minif2f.algebra_abpbcpcageq3_sumaonsqrtapbgeq3onsqrt2": "f11b89848701f40a51e007c6840a99221bf0bf9eeeb6bfd648e57c8e5e5f5364",
+    "minif2f.algebra_absapbon1pabsapbleqsumabsaon1pabsa": "59fa534659ff2f8714056dfbc90de39cb12fe8ed95665484226171128b52b87d",
+    "minif2f.algebra_absxm1pabsxpabsxp1eqxp2_0leqxleq1": "66671df3bfeabe9c4663bb9cf1eecd5c734b2da1a299604da3697f6c918f4603",
+    "minif2f.algebra_amgm_faxinrrp2msqrt2geq2mxm1div2x": "58f75f9eba41d2c434b363311176c0788be939a38873dab444c33800ed583631",
+    "minif2f.algebra_amgm_prod1toneq1_sum1tongeqn": "7cc4331efb5e7d81a23593a3feb4a597dbad0d3588be19a0f0218626d20dabbd",
+    "minif2f.algebra_amgm_sqrtxymulxmyeqxpy_xpygeq4": "e5731f9986a6da9a84f70987eef51ace79f3366322d2dcba3d62084048afc72f",
+    "minif2f.algebra_amgm_sum1toneqn_prod1tonleq1": "937778482179ccc118a5aa84a5ffe4a51e73995d3b8a8cf2fba170fc9be574ed",
+    "minif2f.algebra_amgm_sumasqdivbgeqsuma": "f4e6610cc3750124222d16c2bd1c1af38a3731af7e91e52c53e676012b94c38b",
+    "minif2f.algebra_amgm_sumasqdivbsqgeqsumbdiva": "8f58f18fd32140daecee9e19cd436e8bde2f8d62b117a95b948b7c427e08a9c6",
+    "minif2f.algebra_apb4leq8ta4pb4": "9e924bcd9d8e420f5830a70247d9f6054f7453b224b05d9ef6ee6b07e10ec8d7",
+    "minif2f.algebra_apbmpcneq0_aeq0anbeq0anceq0": "beaa3318826c8663c3871ff23baba92882390e82458393c2d42ea20c7d031221",
+    "minif2f.algebra_apbon2pownleqapownpbpowon2": "3a823f69f62540316f091e45e83408b9c0302fc0e2f41858a283c1572b767d92",
+    "minif2f.algebra_apbpceq2_abpbcpcaeq1_aleq1on3anbleq1ancleq4on3": "89b712923d1f516fe1177ee4aee331b6272c31abb5d73db88e6553e01e149799",
+    "minif2f.algebra_binomnegdiscrineq_10alt28asqp1": "386c537651c58c4ef7c6f7c3b9459030379a122c45846850be9a2f96c4f54601",
+    "minif2f.algebra_bleqa_apbon2msqrtableqambsqon8b": "aeed0e5ddc74c65d03d8ceddb0ea7cc632fb70ebe9774ff3537530831fa8f857",
+    "minif2f.algebra_cubrtrp1oncubrtreq3_rcubp1onrcubeq5778": "db263686d09bdfd9ca9506b1cf1ee4ab7a8d2ebd4c321093007551434fd0a628",
+    "minif2f.algebra_ineq_nto1onlt2m1on": "e97666be9c30a2e40b542f0f62bcc40d58634b05c80a7734f0579f2308abba43",
+    "minif2f.algebra_manipexpr_2erprsqpesqeqnrpnesq": "beb26e516cafa0a0a4a77da0541dcc977b0ddb07ea147d60d870adbf460804d7",
+    "minif2f.algebra_manipexpr_apbeq2cceqiacpbceqm2": "5bcf1ba4e1e650f24c3826695b85be5dafa6a8cb8430309a247d42b644b344c0",
+    "minif2f.algebra_others_exirrpowirrrat": "e8d7530c111790c7fe074d27a4a9f029bb71a5970711207653de5fcc2f13ad2c",
+    "minif2f.algebra_sqineq_2at2pclta2c2p41pc": "3b3da7402e916d06e5c7848e2309106cad41df168ff9b6b4cd95c2c746c356b2",
+    "minif2f.algebra_sqineq_2unitcircatblt1": "6acc38949beb187a9b4c81d1a08f0e789948ee62a6d2a2b71d28e8aff471f580",
+    "minif2f.algebra_sqineq_36azm9asqle36zsq": "a1a3c62f9f9316ead6f6dbc2758f67180d7211f28efb286c5c0841bf5b8ed11a",
+    "minif2f.algebra_sqineq_4bap1lt4bsqpap1sq": "15d62a21043c5124b430dee98785d7fa17b806ae2a782f5f08cdc2bcad6e5ebb",
+    "minif2f.algebra_sqineq_at2malt1": "77372f5fcea7ba41f7ceb141c82273f570a12fd58be91382b077e9429ef0ef86",
+    "minif2f.algebra_sqineq_unitcircatbpabsamblt1": "bbe64029a87154775d6a4c9e3f747de45f3a70a535baab843e21593bd3e76dd1",
+    "minif2f.algebra_sqineq_unitcircatbpamblt1": "55f5070f65510acd68dc0de10a75fda150636d7bd5a053400f46cc4253351806",
+    "minif2f.algebra_sum1onsqrt2to1onsqrt10000lt198": "4405f03cfd6e04dc523d82b7fa4cbc672937bc7214b51a0d21b4872a946144b7",
+    "minif2f.algebra_xmysqpymzsqpzmxsqeqxyz_xpypzp6dvdx3y3z3": "afb7377c60354b05b56000342a6031464c782262ffe9e8747a80b094f4dec9fd",
+    "minif2f.amc12_2000_p1": "3ae6fdf40f0c93c5c18ff04581ddc70feb3cf6eddde70f4de07d8f5b62fcd074",
+    "minif2f.amc12_2000_p11": "5854239af48470d25973d057de15a07617427bd99296c1e887a757bcdf4b21ea",
+    "minif2f.amc12_2000_p12": "2277d7151f61151364f4c6d6998d5bbacdaf314fab711ee40280c46580a5e879",
+    "minif2f.amc12_2000_p15": "eedaf40d435c1121b3315b57c510c4441d8bb68271bc4de2ecbd72d660f93c6c",
+    "minif2f.amc12_2000_p20": "d8f6b43d9c5b9eaa492a894fe6d94d1dc504f7e0518e73997d41968cd00bfafd",
+    "minif2f.amc12_2000_p5": "27629e628fdb4807675395bfff1a6c976104fa8e1b959cac0c32b5b12f0c46a8",
+    "minif2f.amc12_2000_p6": "cbef3c4aeaf4e4e8cbd2acaa7e8b865b11688926c18b9dabdc4b87ab5425ac5a",
+    "minif2f.amc12_2001_p2": "a4db6a0baa5a35eef5a333a7084259defee330c3ddf7ec85bf497d9ccddab841",
+    "minif2f.amc12_2001_p21": "9fb20968d24faf4fa57c50a63f9ba2b55545dedeebd8f3639b1b9a1fca8020ba",
+    "minif2f.amc12_2001_p5": "da329b9552e897917708e059f87f6705ef4a7dc5c2a3ee63cf71a9a5142220af",
+    "minif2f.amc12_2001_p9": "7b4e3a68aed6087ce01b743cf756441cf5498ec8c7f15824f8b43e2e533aaa03",
+    "minif2f.amc12a_2002_p1": "70038d34821d3f9ea210ce7d239b44f35ec5a265f4e39871ac3f39deb0edd91a",
+    "minif2f.amc12a_2002_p12": "5d87b10f41afb4df2c07539455214860571d98c12f6aed27a179203615db9367",
+    "minif2f.amc12a_2002_p13": "802e42ff880f8b1175d60e2b66f575e8a2d05ee0b95cd7e3fa90fc88c4bdeafc",
+    "minif2f.amc12a_2002_p21": "08b66db12bf2be6cb5e466b812286e08398ec3a177fb40efcc12eb4ec1e6131a",
+    "minif2f.amc12a_2002_p6": "5d6233bf1ad536cc9658be9d68fed027d23aeff3bad3f2b08b94936e1f6b510b",
+    "minif2f.amc12a_2003_p1": "b696ed65e576241bf8f30dcfe94179512c6d65411f2bae7c709ff74101b96146",
+    "minif2f.amc12a_2003_p23": "242feb044819c6aad12a8dbf58fb3260af954cc6eb7f138fbe920c3bfa87839d",
+    "minif2f.amc12a_2003_p24": "80f5f22a10693b7c4f15f9cce33c84e92f02aae67a023b2c22a61d03d56a3cac",
+    "minif2f.amc12a_2003_p25": "09f1afbb743fe88b7360d33de978120296638aaf5baf73f571f23f34760f5d90",
+    "minif2f.amc12a_2003_p5": "00ecd2d5c41b7837b1e40fa114f08f49b17fe71ea6165ad3706dbe596f32fb78",
+    "minif2f.amc12a_2008_p15": "d5f1a01c8ab60bd7b63464bc649da0cb7e3d4e53697fdbf6275829e77f68bad3",
+    "minif2f.amc12a_2008_p2": "50647220e550d5d66cfc1045d8365fdbab6b0434d3ac3de87377e2da8c19cd14",
+    "minif2f.amc12a_2008_p25": "ac1e6ec3487b33895091dad5744bea934377b95fe7e043dca62fb8728032f685",
+    "minif2f.amc12a_2008_p4": "79de453bbc8abbc9172ecc1d285827bf1464c61a5e9d507708065c8242b743c1",
+    "minif2f.amc12a_2008_p8": "cb029fc75077463551963099657fed25001fbbbd8d9b6510802dd550f82a7de4",
+    "minif2f.amc12a_2009_p15": "736f5f28df6c3ff8bb18ecab71189e75e2e95de62f6346f6d1f11d6d938cfcb7",
+    "minif2f.amc12a_2009_p2": "1e74df218d38b1ddf82ad11c19b1a498eabe5a5acb79997b0785d3ccacb0434e",
+    "minif2f.amc12a_2009_p25": "2d0063acd63bedffa9b22850a09951f1898e4796b07f093053bfa812f77ae4b5",
+    "minif2f.amc12a_2009_p5": "25765f7732b27a4699906c50594829562c1f64d72630313dabea796fd25e9d5e",
+    "minif2f.amc12a_2009_p6": "fdfb295aaaee44340e99b803c7e6799f482cb5fe899b04d6235dde4398d927a4",
+    "minif2f.amc12a_2009_p7": "dd585b19c8539cf25d7aaf3e5720e41f429087de26a7a557e90aa4013c47052b",
+    "minif2f.amc12a_2009_p9": "d2144ddcda5e64d3f1a95d70b53d459456c6d95d53a04cccb92fdfcb0aceb90f",
+    "minif2f.amc12a_2010_p10": "5e294c27c87ae05c657c5d7969ed05969adf5fa508d81d5e264ccb9888711614",
+    "minif2f.amc12a_2010_p11": "b02812c98a4b61c2ee57c06e7b2f4864d3a8b9df806d19f1b9db018953635d75",
+    "minif2f.amc12a_2010_p22": "ea4fbb3646eb2e265fa9cd467abab4acedd630642f17bebd92fe30417484768c",
+    "minif2f.amc12a_2011_p18": "d15164fff986633677ec1f20726587f7fd54dc81a05c8834e140e4ab333e705c",
+    "minif2f.amc12a_2013_p4": "06cf244ae1f64df2c55614f61e9d3551a6aee8418c05e0f765cda8ef7f3e43ba",
+    "minif2f.amc12a_2013_p7": "6f4ae4a5bc4ec29bc45163d97340d42c1c5fdf33fefc96e54f953f408b21c905",
+    "minif2f.amc12a_2013_p8": "c4e8171a1b377ff1de3d09b825c011b255f5f49fa05d2da54fbf657f21993d23",
+    "minif2f.amc12a_2015_p10": "25d256f865a1a21bc7f77fa69967a4151c9493c8bdd2d6c38d809319c4edb105",
+    "minif2f.amc12a_2016_p2": "d05b73c0d77d119e649aa2c67a045bddbdc14d9c8fdf84b3c0ae909e50bcca8b",
+    "minif2f.amc12a_2016_p3": "9055a6b88823aef9f24218d96a36ce2967b1976b11e232c6cbd66abf208d150b",
+    "minif2f.amc12a_2017_p2": "47b455b2e0f5657625899e2729740d2082eb1995404b9bc5695d6df5f19206e3",
+    "minif2f.amc12a_2017_p7": "98f1e68ca41c5b34b0e92c0f5f99763e7ad0e9403e9aec11e88e17f5911de8da",
+    "minif2f.amc12a_2019_p12": "2c641653279ee6e4ed6d72f2e9268c3f77be0cb7b59ec0bb84ddeb4978b003fd",
+    "minif2f.amc12a_2019_p21": "bc1a9ce4710b10ba7c881b7279e13198a5210b96498a4a691e471cc04d28dca2",
+    "minif2f.amc12a_2019_p9": "3b90da095624716f465360892d0439eaad5cb6e92067045e11e98ff1f7540d77",
+    "minif2f.amc12a_2020_p10": "7c7596b9af7c5ae54a74943ee306c7552e58dec1905349058e8a04ee57cf0b17",
+    "minif2f.amc12a_2020_p13": "02c55dd2fee6a42a574fbbd87162bf5bb93cc08310109d4f5d7b7cdbeac83869",
+    "minif2f.amc12a_2020_p15": "d67e5c88545736f2cb90247cdb228a78d853f8002c5a3fb8a4f99065db901cd7",
+    "minif2f.amc12a_2020_p21": "2e9b6f19f7933fcb1006116ff6731cc530cc77da6b2a288b3173f8cf54fe4de0",
+    "minif2f.amc12a_2020_p25": "696a608085a173861e011d4d9166354188342f67be6e3eb3da7116eb064eff93",
+    "minif2f.amc12a_2020_p4": "d3bb4d20943797fb90a4c78a8882b72a43c02a4cf42c9627258111c5cf1e5e0e",
+    "minif2f.amc12a_2020_p7": "cc9767e17c1d22e52d1cca9aa39825f649435f6f657dd7544886032f1ddd6726",
+    "minif2f.amc12a_2020_p9": "c39280c400d750e4cfaaa8f2f0dd5ebee6b549c1ac65e01d41637be1d3e3f19b",
+    "minif2f.amc12a_2021_p12": "a30c7e065062747f17750d85653266a7455f21140193c8871e0b39581a016d5c",
+    "minif2f.amc12a_2021_p14": "2c96ac5d391c94efa8cb82a535d8a58120249bcc67b6dda893a823aa92352041",
+    "minif2f.amc12a_2021_p18": "bc0124e3a1fcaeb6ba4e1dc6715a134f0314af7be50b822b61dfd60763f93dbb",
+    "minif2f.amc12a_2021_p19": "35330d470ccb05aa9e4d020d4dd81e924a2dafe268b140a2be758bb234e5675a",
+    "minif2f.amc12a_2021_p22": "06b1bc54d7cfb3c59c464cb2fc08058a983c2801d00b046ff58bc70602f1950d",
+    "minif2f.amc12a_2021_p25": "c268267e75d7e4fb831feb2e870ccff79994cdf9679c98a2d153d87970706e4c",
+    "minif2f.amc12a_2021_p3": "36def1a3651fedef63a725c1fa16096b0dcad2d967ba7e961d6c5bb813e44b9b",
+    "minif2f.amc12a_2021_p7": "4fa947760b738fa386ebe09cbc256b586b0a3d2f6b0cfcb6cb16a0611e8e77ae",
+    "minif2f.amc12a_2021_p8": "302b94cd92c9e0e6a1f09fe2578f15c8a3ac4b002fed61cdab264093e8070822",
+    "minif2f.amc12a_2021_p9": "7b012ce52d83376d1e3f55c3329e2dd1897fd1a27bff4f84555a672b5c9c8c58",
+    "minif2f.amc12b_2002_p11": "ce3531b26a4d641d2e2d13eea597d932908e211cb8a385039784cecdc193fbea",
+    "minif2f.amc12b_2002_p19": "431741656e3cca2a53630c7e1a8a354b4ece411ca03bb705f86a0cfd8d1de027",
+    "minif2f.amc12b_2002_p2": "93e895e0792405f6f43d1a550aecb762d4a256e2480903a9355000a23d1ed3a5",
+    "minif2f.amc12b_2002_p3": "2e158da77cad4c07c0bfe23eb02421000b2041da70b11474bb4f7877a6375455",
+    "minif2f.amc12b_2002_p4": "2572f92b87aaf11971a7b34ffbd4eb1ee364dfce7b6ae2d4dd3c26b1684c43c0",
+    "minif2f.amc12b_2002_p6": "7ec20175a636747ee93d9408124bf5a811727b8554cb586ae9907eefee2c8297",
+    "minif2f.amc12b_2002_p7": "817076dbbbbfc956c196e12fbddba5410a0ce0847d15694106abfb85b491f4da",
+    "minif2f.amc12b_2003_p17": "e2eb6d09cd81fde2dde5d55f6975a6395e974e12c1c0791d1f44ea22ef1a26ea",
+    "minif2f.amc12b_2003_p6": "ca1be2bc4ed5ab26821c61a1403815f8aee5bdea61992345fd118bee822c816c",
+    "minif2f.amc12b_2003_p9": "b3dfb9a4ceb0724b9c8c04343bfd97dc101a5042bf7fe9e4d6dc7b2face4b4dd",
+    "minif2f.amc12b_2004_p3": "55a0ee540d26e3a22d67842ecfc8b6621a98f5e162cb27efb8b0930675a5cc2e",
+    "minif2f.amc12b_2020_p13": "b08a794c1818f4846810e95f8b849a418905d47fbfb52d0f86eb92d7d2d3c141",
+    "minif2f.amc12b_2020_p2": "106825de9e0669cf736015467a2fb6ba5330f8a8e2e85f9ecb4baaebf7ba23d7",
+    "minif2f.amc12b_2020_p21": "7c069634ea6487983a5c7bae0a909b14fb76727aea479403b05f965b871457c6",
+    "minif2f.amc12b_2020_p22": "1d0e40ab92f093cf9156136454438ce4321b1e873901f13c0aee623b0a125a7e",
+    "minif2f.amc12b_2020_p5": "1127cafe1c88efacff6c10b0a49630cd431fc8eec448d33d672c39915e13ec46",
+    "minif2f.amc12b_2020_p6": "0568438e93f644d7cc142f75f1b7b9195b2af1c781dd724a4b96ff7fd917f170",
+    "minif2f.amc12b_2021_p1": "2c0d52f9b5653c8842957b2eb68c96444630307fe21b892517d9562c4fe18445",
+    "minif2f.amc12b_2021_p13": "1fef1963857b052cf86047233724ccf5ee973b1b79b619fc90b5d2303f28d7a2",
+    "minif2f.amc12b_2021_p18": "026df1adf16f6e360c1ac8291613f1744dd02301d689f7839369a4009dc7aebd",
+    "minif2f.amc12b_2021_p21": "8b9401a796bcff880922d457c6fb89a98bb8e1f4eee17653edba3567c871dfbf",
+    "minif2f.amc12b_2021_p3": "f57c4d3ce1f13cb6dbe0082bc7c260cc87c8fb404911dcc113dfdab75d85fe74",
+    "minif2f.amc12b_2021_p4": "37fe059224c817cd2be14f789acff38303dd417318b4553efd5ef7f649759727",
+    "minif2f.amc12b_2021_p9": "c82c68869ca8b45be689ad111a89d51f0fb596ec95f04c075ba8e809b9f00575",
+    "minif2f.imo_1959_p1": "cc6d5f2a38588b28fb567fa6da1005318e168f20ce87c79f20529cf2208f765e",
+    "minif2f.imo_1960_p2": "88ff0471c753dc90e351bc562ed41ddb4a28b0ffcc0dfb19d7d21663c9015935",
+    "minif2f.imo_1961_p1": "3a1de3fd31b318bf16551445bd4b883fd0111c0bb59ffebe8d0ad46260da5253",
+    "minif2f.imo_1962_p2": "a5021acf9fa6549aada2f7a9f5ca573ad2431f89e687a8f8e4d60a2cb7fb24a8",
+    "minif2f.imo_1962_p4": "8fba3742ee792ef5b72d1f5f141366c753eeed5eeff836928413fcd117bb76cc",
+    "minif2f.imo_1963_p5": "661e65f8701505b00cd530313a0be8b413c41dda55204fb46ff8449410087c34",
+    "minif2f.imo_1964_p1_1": "485e892e3cbf39b5747cddc2da9acecb7ef20bb271321816b717943512ecbd88",
+    "minif2f.imo_1964_p1_2": "7e841898a9223eaa91b616405ebfb4aebc2b09af73f844e739c6b4b0cc8b707b",
+    "minif2f.imo_1964_p2": "dd7051e935dc6ad26e5874470bed7a853f1d5f15510c15cd1b879d253d88e0b1",
+    "minif2f.imo_1965_p1": "81a17bbd9a9400e59a7bb07dd42c5dd6db280eef0dc2b509098fb8ff132fca68",
+    "minif2f.imo_1965_p2": "b343e83b807aa99697f928e994244dc8f8bef9af5ceb743e4b0a00c26187f0a4",
+    "minif2f.imo_1966_p4": "c334ce220a7ae29cd95b596c4172899f7edc5685eb021f49f376abefe48242f0",
+    "minif2f.imo_1966_p5": "d5373fdb1ff4641b37efc150875d8720fc054011decdc34ac42578a823f120b8",
+    "minif2f.imo_1967_p3": "ca0d87ffd5a687df8eb62b033dfa56ecbe0f1430d4b7673177b61ca12a58abbb",
+    "minif2f.imo_1968_p5_1": "fbef5391ebaf1286e4a873c029a592b273cc0cca1408c241b050883813081c2f",
+    "minif2f.imo_1969_p2": "98f3e1d4aa87e61865ffcd60f68b649fbefa0faf659a41333c73fdb2e3c7a0ea",
+    "minif2f.imo_1973_p3": "a9cb65732a56819bff283def9cda2f980dcbf4045fa0c7e12da862ed704572eb",
+    "minif2f.imo_1974_p3": "a70cb12c9dd9de59ef6e81d879695a5b6351a04b33b1fd3f8fec64578fc4fb2c",
+    "minif2f.imo_1974_p5": "b0aa8749e56e13e89ab3cd0f437e29297bc3c85ab330ea42f83cc9bd08437da3",
+    "minif2f.imo_1977_p5": "13ec05654aacb854a881b9c1ad52772ba5bf39c23a092bf86d24ed338a52b2bc",
+    "minif2f.imo_1977_p6": "6643645b2a1b806566d3bfaed88d240157fdf9348cf4c2f61e732e8faa49543f",
+    "minif2f.imo_1978_p5": "6b666ddbfb5e411f09aab52434f44aa59b0128cf77699b8a45a08a836b692729",
+    "minif2f.imo_1979_p1": "9275e808fab6ebfa9c6617e62a015eaa0ed36109a24fbb1c10318c5e733a6bdc",
+    "minif2f.imo_1981_p6": "539f2ec8206569cceffa3de2ab6684d9e1b7bbce5c1e9b469763856056c572d6",
+    "minif2f.imo_1982_p1": "7846e62b3f42b7e220beed1a344aaaebefc2eede5ef35b6e56a9614b90be7b41",
+    "minif2f.imo_1983_p6": "ee0b4e9600e6df434b5cfb03221b8f99b76cdd0d51ca3d43d9576753986fe5b3",
+    "minif2f.imo_1984_p2": "c86aadb7a30bb9f31c4ce21c706696b7ef5d6d5c3b2e99b030446688b82254cd",
+    "minif2f.imo_1984_p6": "046bb76489866ad8a04e1d59bbbc2825fc7dda85a999e09bc7aed7218ea8df4b",
+    "minif2f.imo_1985_p6": "30cb9aa25d1163ad44496685c2e060316fe02205b03b736e02b345dabf5bde27",
+    "minif2f.imo_1987_p4": "1260428438fd497a81ae22d451998f0ecafc72b29e117582dddb4e7d0a2a3bbb",
+    "minif2f.imo_1987_p6": "abecc645ad2b4322cbb4e2869e1cdd14036c4521d5572a544b14c2b84e56bd76",
+    "minif2f.imo_1988_p6": "196947438b62cf1420dc8f1ff32992fc2d7966088c8cd1ce5c5116e99f6d532a",
+    "minif2f.imo_1990_p3": "b402d0da56d30b5d970c176d5e82a8cc3c8d827b70128e4159b8c41d5219ed12",
+    "minif2f.imo_1992_p1": "cfeca41368e2ea0ce5a919459b1ed907b455b666cb552472be2a05f00ddf6155",
+    "minif2f.imo_1993_p5": "f4cae8d0aac82cbbd8ab6098c7f12df4479e80d34d85eca8b41e2496207fe695",
+    "minif2f.imo_1997_p5": "ca0e0e1c4a5a91e9b5057472a7438d4372c161c6e1e4b243a7018fa2f6f817c0",
+    "minif2f.imo_2001_p6": "fbf7c78ae105864c268ab0ca91036fb4be8ef562d6e596ddd217185849e23363",
+    "minif2f.imo_2006_p3": "b525cb842439ff9160b3cc724263f1b16c7e1fd6c9b942537704d81d246d9c9e",
+    "minif2f.imo_2019_p1": "41d94614a6e9915851d2ac0fb48f3ef8ae8b00dc59f7ba7ac527875e446f9ce0",
+    "minif2f.imosl_2007_algebra_p6": "4fc2e23afa9f62dee7e0f75881c5b9ed47148c5e0dbd18170ef213730f76f914",
+    "minif2f.induction_11div10tonmn1ton": "9b6be2908a03fdb830fe472d9419ea8acb46a5cd79243d7073d81db25f6ab814",
+    "minif2f.induction_12dvd4expnp1p20": "55336934e8d9e6d1442cd66b57e01cff0e6acaee790c27aa55a6cdcd75ace499",
+    "minif2f.induction_1pxpownlt1pnx": "71d55efd9d9cd5eb0e93eef1144ab6c968255feba1ce29dfe0b5d2f505d90062",
+    "minif2f.induction_divisibility_3div2tooddnp1": "3d41958e02b4be687f80d722c99a580f059f7f823c33cbce6e13d185f53923e2",
+    "minif2f.induction_divisibility_3divnto3m2n": "3750405c3ad691d2f0a93a5bb0968539e263ab4a09b5c09d8fd33cfa6a74a3ce",
+    "minif2f.induction_divisibility_9div10tonm1": "71b9952f4eb93bc31fbac51dc908c0bf2c46e8b0556119ccc3bf4aaa487e0775",
+    "minif2f.induction_ineq_nsqlefactn": "036128f5ed0b76d828337660f715354de07404a4c78749730272e1e8913bd472",
+    "minif2f.induction_nfactltnexpnm1ngt3": "fea92e226a33b4b84948ad4ab4302459ac8cf261e0e7e05e2b1c191173e7ffcd",
+    "minif2f.induction_pord1p1on2powklt5on2": "34ddbbc6481617914c73fe32cdfbbc7aae4c22d2ae4c07dda9d158b94f2dc7b8",
+    "minif2f.induction_pprime_pdvdapowpma": "54eb880c80819679f6ccf47a913ebcb881eee81edccd7ddbe352c99961a95ad5",
+    "minif2f.induction_prod1p1onk3le3m1onn": "0cd7123f75fd220b9326073e7901fca78977a97d5c221d17834acbe74d6ee1c9",
+    "minif2f.induction_seq_mul2pnp1": "8a2c044b080160998e30f3f7f7404dee3d7b18eb2790cba58364a6bc0473c010",
+    "minif2f.induction_sum2kp1npqsqm1": "ff61c4eb69b09c4b33ae1f3965c997ea0539f1223efdf2d3e8c3ca04e36236b8",
+    "minif2f.induction_sum_1oktkp1": "cd65ec74ed53fea7e8c85f452f12a348bb9f3a7fe4aacefe2eaa4c515f26a354",
+    "minif2f.induction_sum_odd": "a1173c4dc10f5c88d59006d0b495ac79a969c8cf815182ca21afaa3aee362b93",
+    "minif2f.induction_sumkexp3eqsumksq": "095598ff052fa50a7fa299e43cdd7fa9f57810a5aeefe7e12a54562d20fce1d9",
+    "minif2f.mathd_algebra_10": "6f5ba439d6767903a8fa14d3886288dfda98cb020dca45ee56ff5c4760a3c80b",
+    "minif2f.mathd_algebra_101": "a518b94944b5ce1b67cdd66708a1ca45ca75b70b33616e4edb203273cf8d959e",
+    "minif2f.mathd_algebra_104": "c5570c6c33885c0c4517dffa9bbd6f2aa7b6112dacdc60442f79e91d1db9b959",
+    "minif2f.mathd_algebra_107": "9e98af5d2533516cd72d6102299dbd482f4c34b675a489fae99e545a6f3838a3",
+    "minif2f.mathd_algebra_109": "10d4648e2266f2db697b2f660d6f80251ac27a4e34207cff4ff8eb3193f1ff56",
+    "minif2f.mathd_algebra_11": "8583f070ff6e07e7cfac823d33e3206bfdfcc3358da2688138b2d5cf00b6433f",
+    "minif2f.mathd_algebra_110": "02d0fbf9cb1434e5898033fb46deaf441b5a91f5f866bcb7982379da3e94c32c",
+    "minif2f.mathd_algebra_113": "b915d18cc2c91a3858f9d50a5895f24039ce5d54307db1b2cc2233514e71913b",
+    "minif2f.mathd_algebra_114": "6f901528326cac7a6234c6fe6cdb4a9927478f196910fe741e620bd946db09df",
+    "minif2f.mathd_algebra_116": "2862fafed5b7950f80fd12b8298191b41a34ecf8c0942209b167523cff15060d",
+    "minif2f.mathd_algebra_119": "ae7e700032eff8aae3d1619bb4e82df1a9d331631a0544e17192b01c50fc6fff",
+    "minif2f.mathd_algebra_123": "2b85aa1d7aaf9e460d656435e7c0a4d7ea6a16e971883aec51ce1065998f1623",
+    "minif2f.mathd_algebra_125": "44da57e4972dd37bd42c6e7c20b9498b63d87e7f6e767d852918f53bba2bea2c",
+    "minif2f.mathd_algebra_126": "805b76149d9445f9c85c84e3c8206ccf96aa249fefb79a00615a1446cafd478a",
+    "minif2f.mathd_algebra_129": "dbeca6dd7cc45a7e665fff46c309a3d539b68652b9db0acb0f45f0415e0055fb",
+    "minif2f.mathd_algebra_13": "ab818b8851604bd8b6538e6340dc42fdb27f66ea08ba7d50eb2dc52a457e2a5b",
+    "minif2f.mathd_algebra_131": "6bcc5b961c4ba45de593e6777f2035e9cd230e50013a5db2195f77bcf107c7c3",
+    "minif2f.mathd_algebra_132": "1ddcf21e6ad36f87ea2d3c7921ce9a704d3bad370585d7b807a8505094364e47",
+    "minif2f.mathd_algebra_137": "c5e4ceabe95c038f199d6c7052d8a798e70703bb2e275df7f3dae117d424014a",
+    "minif2f.mathd_algebra_139": "ecb307a55916ae7a865c4e2aa71982bae4815825bbd72f1bb7acf14859452229",
+    "minif2f.mathd_algebra_140": "563d90f7832e22fd9a91b7bb75940abf06feea3e98314536372a06754b405d87",
+    "minif2f.mathd_algebra_141": "e48648201010592ea4835d4bb6e56d6a945af3327281758c9f69086a3b38c186",
+    "minif2f.mathd_algebra_142": "0eb5b1ca85c5ea849e31ec0ea1f40e94f4231ba4af78f67f82e925a8fbdfed01",
+    "minif2f.mathd_algebra_143": "6cfe308de1693bb64866e962311a15e6dcfe5be61f8bc2f6b379407718f79d9b",
+    "minif2f.mathd_algebra_144": "d083e4e16b5adc3c0c0b297976abfb91a423c909e8b0c07e141eac12624ead41",
+    "minif2f.mathd_algebra_148": "c322d34e97425d56099a3c403c4742e06cb9d54b7ce831334ce64d4986884331",
+    "minif2f.mathd_algebra_149": "2a81e168d64d47a610649921e4dcc452588b20595a2a5a7f6be363f8b33ed600",
+    "minif2f.mathd_algebra_15": "36d4e1ecedd525683b108f14de1d06eabed28a73db146a7d870ba6391c4e51c5",
+    "minif2f.mathd_algebra_151": "f45cb8b62f135e5ce0053dddbb128ae57494c97899ec1b0b8e5b3b8020d4015a",
+    "minif2f.mathd_algebra_153": "93e2ff73f526ce298ed37e0f2733d719d82b44771251b181c563d161bd095b7c",
+    "minif2f.mathd_algebra_156": "c995deba57fdaf23105a5354163c843716ab873bf1df83cc49629918b09a18a4",
+    "minif2f.mathd_algebra_158": "597f4ace01efc9aa77390820a314e87204a253fbaa1014dea0c8eed6b182adb8",
+    "minif2f.mathd_algebra_159": "abc74cf15cdc7bd1198a88138c4fd8f40b43b664959e842391e65f9044a133de",
+    "minif2f.mathd_algebra_160": "5203c8ba5d98209b3fb145572e71aa2c66df26b1845ec0c900ff636bacdafd79",
+    "minif2f.mathd_algebra_17": "10c48f7f121fc35a23f05040ef193ea0b739c50666ba12532a167d9ea26319d8",
+    "minif2f.mathd_algebra_170": "47d392634675fe5acd3104f7b58e74dc76f03681f9683f79f2d0348a17c171a1",
+    "minif2f.mathd_algebra_171": "699299109f2aacec56708e5eefa91c3b0f1802d30bc96335be40daaf1c2cfe6e",
+    "minif2f.mathd_algebra_176": "1a63df0fc5af9400573b356e1a3ed464911ef18077dd691d17311749181d7248",
+    "minif2f.mathd_algebra_181": "f644fcb678fbe47bd05dbd683ddc4629e652236b58a95748593c2048591b5ad7",
+    "minif2f.mathd_algebra_182": "6bbd39ab8ead2a01791627068bdbe538bd2c78337aab01355dfc01189e7eaeeb",
+    "minif2f.mathd_algebra_184": "1b6db734a3378db6737177727bb81d0d11d989f26931c4ae90c67b620f41a9c3",
+    "minif2f.mathd_algebra_185": "cbdd95031919765f8f4414f77a913fffe187f9fb1bc939c80e0b7971337bea61",
+    "minif2f.mathd_algebra_188": "d9da3569e21d5b509a394a878c174b9868cde24ffb18550d900ba8d78f259372",
+    "minif2f.mathd_algebra_190": "87d76aa3b8e7e6497ffc5ca7f62aa5493676cf921497d44e64cedd2ebf04643b",
+    "minif2f.mathd_algebra_192": "17624a79b4920afbba975864df501613e50b3a5e74f65a5f36e01fbdeb881736",
+    "minif2f.mathd_algebra_196": "c2ed43279ac4c5cfbe27c33aedfbdee6f1eb0a154fd0144ad8cd8775e9dcd5a4",
+    "minif2f.mathd_algebra_206": "5d8399bf9c2588d866c5cdbb48dbabbb9585da6eb8f5e25b56018fe244049d87",
+    "minif2f.mathd_algebra_209": "1644f1ad2b1a28ed8e292e07203d811e7f3608be1f9abbe0cb3cdc600c9da8ea",
+    "minif2f.mathd_algebra_214": "6ed10e3ad0338addb5d358c574377fd748d505f9f85f25f01445871d8e8768ec",
+    "minif2f.mathd_algebra_215": "553d32c9aa1ddc3765ea6562d85ddfaf5445cb8697a0627a4f52850c1f682113",
+    "minif2f.mathd_algebra_22": "98096b84c5bf31c02ac2a6cb8b4f110f073e3a3b8987264e20eea789e7aafae1",
+    "minif2f.mathd_algebra_224": "8d23deb959536d77171f34949d762f56d3a9e3199e364ce711c2430698e8fe5b",
+    "minif2f.mathd_algebra_234": "d4084dea438c73ce38141a6fff45a8fb3d2ee7aaeafc265e83141cc53dbfc641",
+    "minif2f.mathd_algebra_24": "5b1025f74162ca9fdb2ced62f1d323e9435602006e1f96c8c2d70e358f91b3f8",
+    "minif2f.mathd_algebra_245": "d03bc6557d5c10f4ec0da59c32da38f9b72b025def1a3831c090830a23cbea44",
+    "minif2f.mathd_algebra_246": "3dea63eb6188e8e3da676836d0e967549ecc381a2865acc71839731b6fa75ed9",
+    "minif2f.mathd_algebra_247": "e23f9091da61cd13f9829e4a76436e17f3e45a3fa49d296ffedaaa9c17ee637a",
+    "minif2f.mathd_algebra_251": "cbc9f83b77252564d3801da918c29d5927f43efa7e90da7fab9af27fa1012bd9",
+    "minif2f.mathd_algebra_263": "61d7d7689b33334d4adeb792c58586b312342382e3e797f08c8997bde2acdb99",
+    "minif2f.mathd_algebra_267": "0163cfbd236086668459ac0406715fc4ccd06a5bc9da0306dc1c301f04fbacfe",
+    "minif2f.mathd_algebra_270": "25b192d3e64cb1844c8396ef66796a4086e53e9f87e04d16a7e36346a78335ac",
+    "minif2f.mathd_algebra_276": "30ee5b25b3f835ab8d3b934d324818e0f8636b984d65459f4f8b85d1d09230a3",
+    "minif2f.mathd_algebra_28": "307fa763ae2c572a804318be5d093a75e38b0c9c2d20378642062221a45b34a7",
+    "minif2f.mathd_algebra_288": "098b058bbfc660417dec0f61f6b108910467558a651f27e30fb443dc5ec5f2b7",
+    "minif2f.mathd_algebra_289": "64a0ec4140ca14377c6478c70e29a73d12c1875c8a512e12c288de8039de167b",
+    "minif2f.mathd_algebra_293": "4d9d89077946584d00db3aa55841170d95617acd8ea2fe36f6b2eab76573d686",
+    "minif2f.mathd_algebra_296": "6dfaa8cf2297b7e79d3dbf24dece3ee96d7bd66dc6cccbb58a92566d12fade9f",
+    "minif2f.mathd_algebra_302": "3c6f78754c1817298c2853250f3339720dfb3befd60b527633256432520a411b",
+    "minif2f.mathd_algebra_304": "8a0067a964875ecf19da3979b7a8ae33ff4d24ce3183013bf16950ce88f84354",
+    "minif2f.mathd_algebra_31": "69aa1103599ac28086f4d6f16588a27a5559547e3977f600976cdb1f4172ef83",
+    "minif2f.mathd_algebra_313": "1e24f2d9a27317937e0b801d892c24465b80210cf7ddad563bf14ad114e8acda",
+    "minif2f.mathd_algebra_320": "773435f5cac85bbbb8793d1616cb7a2f135b8f1acc9253845b224b00ed1dd7ff",
+    "minif2f.mathd_algebra_323": "6c81573eb17f516586c4b80a35e53f2f5921094eb166f288a4348b645345d836",
+    "minif2f.mathd_algebra_327": "dc6d2d445f9d2062f7cd5446e37bf639ab595da3ad45992d19e0dec7219a65d0",
+    "minif2f.mathd_algebra_329": "83c3163c33067bf08ac267a8a62d8863694c55de0f06df96cb57605546ec8015",
+    "minif2f.mathd_algebra_33": "96d4a8920e9d27e33e522f447c46150034367c2ad66332352e69adcf3592ab4f",
+    "minif2f.mathd_algebra_332": "5130f083cba519d925732ef0810c07ae565f581b06588e8119ffec9bc009fd7f",
+    "minif2f.mathd_algebra_338": "fa842c2e609abcf2ed18a1ec6dc15bcce4aa889a50682f2fa96772941e5d4b40",
+    "minif2f.mathd_algebra_342": "a4d1bce32e94700b4649c646bb1476758a3ccd4c6a442cbc62c40ba19fe3c16c",
+    "minif2f.mathd_algebra_346": "9746af67a7910f2c3c07657aefe22b6d04c802cad30d8e3f610a7248c2af2dd8",
+    "minif2f.mathd_algebra_35": "558dfeafffe82a49de2e58386170ec760d26f05491cda61e7dbd02f8cea08e5e",
+    "minif2f.mathd_algebra_354": "2e48d2d57d2f68d7c4cdf862da326205a0b3f34ad144fa140785d7c4508b7560",
+    "minif2f.mathd_algebra_359": "b71cd392608b5b341a7b82a41d325c82e88ecc7f9716b880be74a025f6c9875d",
+    "minif2f.mathd_algebra_362": "e5b5995577649d3aa284edc235775bc2d78ffc2390098b500e15d3017791c9b5",
+    "minif2f.mathd_algebra_37": "a48e7b494e230a1947795a743419feb077dfbacf5a48f72c351fdf14752981b1",
+    "minif2f.mathd_algebra_388": "f7a5ba86e35b4a9e471b48d1646e503f9313a504dd433d2647ed2ce2d32b41d9",
+    "minif2f.mathd_algebra_392": "65f9d1a4d1f91ff93958a52320f7034ae4a79c385f812ec43c4f1e37fb046f8d",
+    "minif2f.mathd_algebra_393": "c657914a029775805a5d1de00636bb0606e4ce889efcc46cbd9fc34603c64e89",
+    "minif2f.mathd_algebra_398": "c94f5e5afdfc3b4a4a8ecfcaa9586bd17eed45c780203bd2fce6206c01048e20",
+    "minif2f.mathd_algebra_400": "e1a6b68b1296e5748d7dd58ea305365391cf9c3a98f185caefb89dded5e870e6",
+    "minif2f.mathd_algebra_405": "5dfc088097136e2161faba3488270365be418550125ca609d4105b2967f2b048",
+    "minif2f.mathd_algebra_410": "89b5c021e322b5d40e198b0ee4d5f1c1e71886c3d11a1b0da7a0134ceedc65a3",
+    "minif2f.mathd_algebra_412": "c020706106476483e5f989817cefa372fbb55627224d290d10fd436e15263cb1",
+    "minif2f.mathd_algebra_419": "de33baa7244080b6bd1b70e5858444523f00b306618ef98660dc7cdf9d1c70be",
+    "minif2f.mathd_algebra_421": "7276be462a32f78b8c38ac5d3cb51db8af381912e5dda8fb455300072405f568",
+    "minif2f.mathd_algebra_422": "2446e62615c71bf870e7d4859d09ec0caf625673bd76795f3ef916655b3a5e13",
+    "minif2f.mathd_algebra_427": "7d1423a39239dad091f23997be26ceb48bbe5af76f73e71ee4d72867e55068f3",
+    "minif2f.mathd_algebra_43": "4b96f58190a5efb70edf646ee5b61da3ce98e2879d03733237763b788ead293b",
+    "minif2f.mathd_algebra_432": "bea5cf79debb6071807a94ca1287ea7d0c9ddbc803663d577d8feca70537e5ac",
+    "minif2f.mathd_algebra_433": "0bb15399ae6d0b4e9f7d2bfbaf2f78cdd93869cc5034d916bf446e86a8814da3",
+    "minif2f.mathd_algebra_437": "c02d8fce0db9b40ef93af11df04cf24cc5ceb3552e9e84c211beec9d2233b5c8",
+    "minif2f.mathd_algebra_44": "3b594219e4daca244cb5299e040d1b77bda1bf280f207ce878ce2057a5208d03",
+    "minif2f.mathd_algebra_440": "42005f2f86e8b8e4a1826238daa7bc61823188ffca14351e951a94998976f6e0",
+    "minif2f.mathd_algebra_441": "f3c294a937856a547c5cc2868378fa223b985fb0d4142abbc5269b7e552cf900",
+    "minif2f.mathd_algebra_451": "6f620786ed3fa1862b51210f9563109ffb4f4321fdead051b15bf6f14d37cc0e",
+    "minif2f.mathd_algebra_452": "d89dc7e5aae8a4f1103cfc7076e55576a35111ee526a862393ee4f9492db0786",
+    "minif2f.mathd_algebra_455": "031508280c268961c52489a808b77712e96bb17816962d2591ca6f6205546ad3",
+    "minif2f.mathd_algebra_459": "e26317aaa1f5dcfec9f182fb455e3ecc2d72729fe82d0db2c351163e0dd87900",
+    "minif2f.mathd_algebra_462": "58451410a30138f2b38f70b873682740092763743c0d72758922c78998378ebc",
+    "minif2f.mathd_algebra_478": "f43fa316408cca2ba12624c30e0c96d322b474761e02080b95901f90ea21a445",
+    "minif2f.mathd_algebra_48": "2763afb3b19cf7fb762612e453c20ac28e69abfc68c537a16f5fa4c134f0433e",
+    "minif2f.mathd_algebra_480": "f711132146a4e297cd2bd3dcd0e2a767caf24538dfd7ef26d34bc22f0a86c84f",
+    "minif2f.mathd_algebra_482": "145c950b36a56184ba266fb158141950dd91fb49fc9978e3df8ebcd14e6eec02",
+    "minif2f.mathd_algebra_484": "44741af66851f000c46a90f6ebe6368ecb940f4a3b970a50c23538c19d6ff23d",
+    "minif2f.mathd_algebra_487": "cc4cc56fce5f693644755eb0e5da81481fb90389e7bbe22a080f21108317f77b",
+    "minif2f.mathd_algebra_493": "04bdb5059e11d11bb73fb151a77f8119e08f336d4cf543ba5ff8f25b7ccdda66",
+    "minif2f.mathd_algebra_509": "03755d03c161fedde3ac522b2c909e8685663fbf73e93f6e5c921554c32a3305",
+    "minif2f.mathd_algebra_51": "d12e0781aead48579ef84142664b585c0b37d48ec0135201c205c733861198fb",
+    "minif2f.mathd_algebra_510": "4209872b48913dd2d2486da5a1615afe51e3eb113184829d86d5eb2c157029c7",
+    "minif2f.mathd_algebra_513": "37009cc2e4b9fc1137ffe90bbc48d6679830e23192a5ace64bec5b6c251aea1c",
+    "minif2f.mathd_algebra_536": "fef2caae7fe1c8e78b89df915bb3930eea786d86b5b55c3914a95d060b24fb72",
+    "minif2f.mathd_algebra_547": "b18eb12ced02c03f70ca1f0a778255dcf0bdcfc653a02f660538de38010741b4",
+    "minif2f.mathd_algebra_55": "edaf8442e03253c37bd9f9ead122bef92200adafd587570e0a05be3d2ba18c4d",
+    "minif2f.mathd_algebra_568": "4876bf82ebfb93916b96512ad93d9cd3f13f6d976802e8a018a40b227d7d6007",
+    "minif2f.mathd_algebra_59": "164fc1a536b5778580ae6ceef755d5b986a5c71aefbe138453b7a64db3b3fa74",
+    "minif2f.mathd_algebra_598": "5e9496e41237af534d4c3c084983b3a339c4ba7087d96358aa9ba123b2b0c4b4",
+    "minif2f.mathd_algebra_616": "2bdd9e8572c0ea1ecea1a70703709a03ba17ffce4c0c559c17fa8dc85df8f8c2",
+    "minif2f.mathd_algebra_67": "d8f827dcefe75a546d49da77610af449c49df55b9d25a2898741e011cd7084ac",
+    "minif2f.mathd_algebra_69": "8f90287aaf8f97742a2f04358edc73e4f47104135c7d3b357c9454ffc55b60db",
+    "minif2f.mathd_algebra_73": "f188260780250352e006f8523b0df46b99860ff9523fcadc1134c70aef0e1dca",
+    "minif2f.mathd_algebra_756": "9d2c524b7936893bebf32a932ceaacd2ba795328fe8a5a5e16d10aa07e8804cc",
+    "minif2f.mathd_algebra_76": "017ae413e8c35768743547f72bf01cc9490c217a96cf805046ecf11b2bf8efd3",
+    "minif2f.mathd_algebra_77": "494ed5dbb7355b5199821bb98dc0c56b361db53d098b1946c3913200803c58c8",
+    "minif2f.mathd_algebra_80": "7880a445bd5dc051182c3ba8be2438ef35465b4ff87dc47c745c7d3e53d7b0e3",
+    "minif2f.mathd_algebra_89": "1590e67e210e57dc9202d1551befdb2c0fd220e83e2d0c705142be81ac9583c0",
+    "minif2f.mathd_algebra_96": "8c2551d53a44b9c1afe1bdd98e2ac3bc5d6d270694b9c4af43a1531378871698",
+    "minif2f.mathd_numbertheory_100": "c9614ffe18ee5c00070a6dbb674696db6b787c320cfac3dbf8195404c5da29c6",
+    "minif2f.mathd_numbertheory_101": "a7470565e10e3be7367476b5ad87e6e2a0e6e2d359f7a7c001ceda0e83f2d68f",
+    "minif2f.mathd_numbertheory_102": "54f575064a03a4cc0c059228329f9d5c2b064ad40e5a26a9adb76eca9f9805d2",
+    "minif2f.mathd_numbertheory_109": "8051d0f84bef9c64264c98ee320884b021a345befced9057b3a4cfafcd431c0d",
+    "minif2f.mathd_numbertheory_110": "3232c542d05dd6942f10efb2e099129b5819b721c90d17a5aea63ccfb8e7bdb5",
+    "minif2f.mathd_numbertheory_1124": "390d3db60b1778f9d00108f4cd4520c635ac9721151dd7a6e4e1b3089ebb4305",
+    "minif2f.mathd_numbertheory_12": "abe6cc09ea790da51b8e5e3a7ba9f3fbf567a98559ffa8cf0558a757fc1af16a",
+    "minif2f.mathd_numbertheory_126": "283cc830eec580add05dd00003a767e56cfc38ed37423eb657a816cb395b18c6",
+    "minif2f.mathd_numbertheory_127": "0fd4e366b5d88e44df7be4375076366335acfb171f554a173e65fa3b730ec110",
+    "minif2f.mathd_numbertheory_13": "26c6f6c7df2aed1ce641ae13c18d5ff67977e3173345e555d18e3a7308425ca8",
+    "minif2f.mathd_numbertheory_132": "31e0c19730b630f60c2702f90230d4546ce5ee5c94a3a943f308bf89aeb9e5fa",
+    "minif2f.mathd_numbertheory_135": "041d0131dc6b25dff8eca5a658d0398ef7835017896b5298621d6ad28c2635d4",
+    "minif2f.mathd_numbertheory_136": "733c382a56e4b80abc35e6a7bec14ca516ed01827d82c640e67f3deb42c4525b",
+    "minif2f.mathd_numbertheory_149": "c3b9fbe7c34522ad8e1120951c695a1b7c6c0ceee848c1f260fed2ac9af42f2b",
+    "minif2f.mathd_numbertheory_150": "322b66c63e429015484c10750639f73d5e8f9ea183d53f17707155eb270389be",
+    "minif2f.mathd_numbertheory_155": "cfe398cbcedd9b9719bf2231c293ff6ba4a5a7422c053db5538e24619957a600",
+    "minif2f.mathd_numbertheory_156": "842b214030c7ac83ea1433f16ddd4baa84c546d83b00a1345bee35f2a47be3a8",
+    "minif2f.mathd_numbertheory_169": "8431b8a5584912c682733d648962e1d202d1a0fa5bc92d8bb3ca96a4abac8880",
+    "minif2f.mathd_numbertheory_175": "1f9df0a749b395bcd55edadb4aeae558c26dfa3678849c370620df08cee1025a",
+    "minif2f.mathd_numbertheory_185": "afeada19be577cefc2cd0907749824a0f79bc333a427220ad1099c4398fbd1f7",
+    "minif2f.mathd_numbertheory_188": "1a37aeeb1d8bfc3b6b91b1eaf12171f7321a2bda9bbbb114d0c2afe664b097bf",
+    "minif2f.mathd_numbertheory_198": "0647f6c52c6ae66ec3df5d06c83246e2daf540b5a298646d69672db7b09ec34d",
+    "minif2f.mathd_numbertheory_200": "aaebf49ab2f0b2af80cea10751e9d7061057710503c93b49d2e1cb13ee0018dc",
+    "minif2f.mathd_numbertheory_202": "e5294fa8e24f27ec12e0d471d9df8c1fe1e044d90313aa47fca0249469355347",
+    "minif2f.mathd_numbertheory_207": "9b9e30d1e717e04a6bd05903ec567def5ccbfe6e73d2e394ced7559fe5c244fe",
+    "minif2f.mathd_numbertheory_211": "c9a4f6ccd4f683f44a11cb670b26bc97fbcd2bb6a8344c870f91d01d5cc65ef1",
+    "minif2f.mathd_numbertheory_212": "2be53ec19b7571c6ff32e6f93a8c2bc3038fc5e6e38a36b2deb5943a7d7d3e6a",
+    "minif2f.mathd_numbertheory_22": "a877a30d23b2a6ecc238ef46b2d1abc7a22a97ce42b0d762a4dcf6c9bfe6b9da",
+    "minif2f.mathd_numbertheory_221": "5d4a36339d75beb57d25e216854678b0ac649c0619307d33c22180f47fab4ee6",
+    "minif2f.mathd_numbertheory_222": "07d361e7d82c4eb7288502c04f7977771519881d70e9b39f6f13fd584637c03f",
+    "minif2f.mathd_numbertheory_227": "aa406fe1c5ddc1abe2d2fc3f92c774a7dbd9a614dc315cf1da4afdf8a5598b21",
+    "minif2f.mathd_numbertheory_229": "8bbc7c39ae15b5cc0f2cb81dce5b91240b8a5cea2ee16ea7124042ea00626a50",
+    "minif2f.mathd_numbertheory_232": "ab3ac55ae3745e3b8dda9717181f5f9df9ec3394409495fc4fbfd48e06dbb652",
+    "minif2f.mathd_numbertheory_233": "fec287330bc602f5da1e70ef6ca9f2bca19e09e79464b9c3edb6360639a03e41",
+    "minif2f.mathd_numbertheory_234": "cdfcd4cece79ab76bf69255077d66cfca5078139f4b13d4a4bdf27bc8804d2f1",
+    "minif2f.mathd_numbertheory_235": "b08f64fae2a87c1f868921c73674909136b6e85eff2ae2700391c924a103b011",
+    "minif2f.mathd_numbertheory_236": "2064cee56ecd6358a8227c688b043ca5f7486b238b1b2d8a4fb2d773fc254d25",
+    "minif2f.mathd_numbertheory_237": "6f6b951555cbb7e343f461e203db01ff9b795ad9e80bbeace9325b89ae448285",
+    "minif2f.mathd_numbertheory_239": "420f5f56dc38e173eb5c4b16485065c41a159e6ac98bbfbada6e475e1347f6ab",
+    "minif2f.mathd_numbertheory_24": "5e0f8293768f1a23489dc87de8c0ec89d077cd54a980481e37d0769c0a79dcfc",
+    "minif2f.mathd_numbertheory_247": "3ecb53bc6eae7361c36869ac8a5decab202ed8e54cfb92d44653df3986779b50",
+    "minif2f.mathd_numbertheory_252": "49e75447ead2a6d9cb5531b05f2f1e0d502be9909b54e6bc25acb0748ad1c02b",
+    "minif2f.mathd_numbertheory_254": "f5afa0219018dafcb095c108c14381b9d24f5afb56272ceec604ddf063c77c88",
+    "minif2f.mathd_numbertheory_257": "b73a91aa52b459b648d29e4afcd2ae9c0185aa6f20ba24f82a7efddf472591e6",
+    "minif2f.mathd_numbertheory_269": "eb69c9395ea6ea38e9c384e9652d6abf1d7b8fd1aeacddcbfd3b7a4942e40655",
+    "minif2f.mathd_numbertheory_277": "d3b278408f4f1cf487e7e7e0d816c9c350e4675fc15a83d9b49a7d7828552338",
+    "minif2f.mathd_numbertheory_284": "3a7863dd27b3968f39bb3e9eb165b37370d878919d189f685019114190d61ced",
+    "minif2f.mathd_numbertheory_293": "696ce7e4e021a77bbe172ace6aa5bdfd2741e5e86e76db333531e57318d1b2ad",
+    "minif2f.mathd_numbertheory_296": "3c329d37abafac9b4faa12da3cc202ad9bd95eca7731ef8245e5ed19d332bfbc",
+    "minif2f.mathd_numbertheory_299": "c906064ae933127b16b072d57582afcd2b9d33ba0e467246c4765943678addf8",
+    "minif2f.mathd_numbertheory_3": "545ea7dd462d33b2fc18d95f83a4809e51226b08a9a0f5c50e3480c84fcaf073",
+    "minif2f.mathd_numbertheory_30": "264a6adf1c3653b2dbd375bf0984670f7e3ab381d22c0587df18e97f5a37727f",
+    "minif2f.mathd_numbertheory_301": "33f0bd98757c8a030e3bebb45875d10342f53a40f47807188c3fd359c6ece7c9",
+    "minif2f.mathd_numbertheory_303": "47affbae1e15c8560b2ec435abc7717bcefce1de2bec01cf486e8a77ce700ead",
+    "minif2f.mathd_numbertheory_314": "37a1ebc9b1cf4ebd3c987488d5711abf8a97f128866a6eb242fbd26a9f7bf8d4",
+    "minif2f.mathd_numbertheory_32": "66e8cac9242fc377958b538d6147948605434b0e7bd725ced56386a62a5f8f74",
+    "minif2f.mathd_numbertheory_320": "be5aee5c603d4fb9fda0a7baff0b57a67b6d3ce55e3271fff4b3ac5c9cee5d28",
+    "minif2f.mathd_numbertheory_321": "0d16f1497b2a65364bfa7c34f865bc1622e1ab87b332ad1f55e62b329c24c716",
+    "minif2f.mathd_numbertheory_326": "e3bce3e1b42e4a5a2e86cd3005328e37ab19332d4f9bd7e6f23f9904e178b1f1",
+    "minif2f.mathd_numbertheory_328": "6f93ecf924d6348b3f76c4865285a6cb4a448fbe3c727f21aa012968187ae89f",
+    "minif2f.mathd_numbertheory_33": "bdce9701c28f76eb318bf4ba5e45c7dbebf05430660885bfadff166fe6ea502a",
+    "minif2f.mathd_numbertheory_335": "497f931e211dacff9742b301885e6f7067774caba93434720c3ec3319b1e4702",
+    "minif2f.mathd_numbertheory_34": "c87f1870f0aee0851613db7325b9e7ae7d6e6dcf54b999225f77bba5367221ef",
+    "minif2f.mathd_numbertheory_341": "890552de4cbf8f68761fb58ed94405538c16533ae6113a5581ba84d278d23e83",
+    "minif2f.mathd_numbertheory_342": "6df45cbd042e0bedf3b3f350ef92a349036b8d188ae93395aefc85b4dd2490ae",
+    "minif2f.mathd_numbertheory_343": "d18e2447d4be8c8518128064b032fbd0c45e2b29be4ad7236f74697734852eb9",
+    "minif2f.mathd_numbertheory_345": "2e33c7764620ced1e7cbc1c8ffe0777d52fe3510c566e276f4b9b10abfe6c033",
+    "minif2f.mathd_numbertheory_35": "107a54d4f2e8fac454baf3a1b371ad31ea75de1b84513b4ec7d134316a3a8594",
+    "minif2f.mathd_numbertheory_353": "69447041d49d028f6e1187fe5ba95ca764ffab1e8fb0d0c74ccf822a57efbefc",
+    "minif2f.mathd_numbertheory_37": "23efe894f3d0a803b080a288831df9ccbc52b95e2231ee1e5f62f7dfbb901b41",
+    "minif2f.mathd_numbertheory_370": "d75f631d5d1648cb22e5d64ea2fa65b3a7f9959aa3dcbe217b3c3a1cebbe3228",
+    "minif2f.mathd_numbertheory_403": "1c47ac85c141040b1485a3096e84e7bb28bdaa42aa1eb846fc0ae8b1e6b474dd",
+    "minif2f.mathd_numbertheory_405": "a95eb70878023b035775041cea3c69889729fe00d462f4dff01f4cbf84683c36",
+    "minif2f.mathd_numbertheory_412": "28bb8aba0491eb440a19a563f16a2986a4579cc8010615804e3f03091829a71e",
+    "minif2f.mathd_numbertheory_42": "818e1d183c06676d13eaff25c74b30b7a6bae63c5306f14212f06f4cdd254ece",
+    "minif2f.mathd_numbertheory_427": "674d61646ee9365715cee1ce21671ff89f9cc329e65b85f120e7782de9012894",
+    "minif2f.mathd_numbertheory_43": "81a1a3a7cc94c147d78fa724aff01b35d48f042dd478d8d3c00bd05b45e70b39",
+    "minif2f.mathd_numbertheory_430": "99dc3c61f9dd0064c4945d5bf4efad76259c0c90c0650e4076a112d7339b018b",
+    "minif2f.mathd_numbertheory_435": "61b6fb5dc3beb8108efa9be7c063a7b5d8329f19ce8dc5a0496eee37f1b83d6f",
+    "minif2f.mathd_numbertheory_447": "aae92a9cb2167980500800ebded54117ebb087f289a0fc2e0a78684e450a7884",
+    "minif2f.mathd_numbertheory_45": "5a0d3298c7717d18f50f16598860b8b6306f0046d072bf2897e63942066c5a34",
+    "minif2f.mathd_numbertheory_451": "df8e65deedd7b760d6981838c447037d2d1e0518e026d676d957efe4eb6138f8",
+    "minif2f.mathd_numbertheory_457": "cf1519dc84332634fd22ad22d0106927c17a2aae54f427ebb7ad349e00d5503d",
+    "minif2f.mathd_numbertheory_458": "6b42484e5132f2ec7bfb16ba6912c39f6258096fac4defa7cebf66b55caf395c",
+    "minif2f.mathd_numbertheory_461": "bbefaa1fab8a70bb29852a9ccae43403337e1667b5c67ccd12b28ee2bc891ebb",
+    "minif2f.mathd_numbertheory_466": "9714fa8f997f0c33900bae2d4117ab27e97d3c310ce3f078d5829be3bed92589",
+    "minif2f.mathd_numbertheory_48": "5346fd6f6832418c7309c7567158709dec90aa26e03f8cb934922cf9a5ed4234",
+    "minif2f.mathd_numbertheory_483": "bc2787642df3940355398c29bf6097325191edfcb71d7586a77b9d7f8251dd11",
+    "minif2f.mathd_numbertheory_495": "6b0df87ccf9872abfe72e877f44b309e7c49af703d2f21d928d3ea6d5a2bc659",
+    "minif2f.mathd_numbertheory_5": "fd2e45661d4409c8d1177d6e5f465ff62e3bf7aa66fee7828badfacbdb1be250",
+    "minif2f.mathd_numbertheory_517": "c29a744871bf25fa829b462b1711632237f0d7aab334d3342db09fa2285c024f",
+    "minif2f.mathd_numbertheory_521": "697f800d45810523a588f04c4ed958e15abfa59f29acc50cb51fb904c565b986",
+    "minif2f.mathd_numbertheory_530": "313bbb394ebbcadc9cfa4bc0cfaa59016fe38d902da39d3cd3f2915fb87cab6d",
+    "minif2f.mathd_numbertheory_541": "960c03222d0d227da5bbe22dba5df43db2663c54b2858aa74dd3b728c474d02b",
+    "minif2f.mathd_numbertheory_543": "027d696bdfb5ba6c7b037dc9319201764d60fa0657159953fd946c1a7828cdb3",
+    "minif2f.mathd_numbertheory_551": "7bf5c55e699029e7e5ba383b4e98862892f387ac349c7c920eb81ea2dd8e07e9",
+    "minif2f.mathd_numbertheory_552": "d6db710a96bf85b238b5c9e50de8ef6982eb6d6cc0f71484df659d301a81a174",
+    "minif2f.mathd_numbertheory_559": "5bfe929ab8855076e87c6a14c12b20527f54f49ee3d28371bf0a6dd9db61a3bb",
+    "minif2f.mathd_numbertheory_582": "c5a01ec7e34ada96cfb9d317b7471dc53be28b68b19b947055c83f1a995625f8",
+    "minif2f.mathd_numbertheory_618": "76d5ae2f71ca07ec37ef9fb825dec73f38f7a6662e21051c8538561e7e92017b",
+    "minif2f.mathd_numbertheory_629": "652b7e46a188ceeddb4201f41df3e34f2b1f1b014f054810e3fee1a5443ed81e",
+    "minif2f.mathd_numbertheory_64": "1b1441c7b5797b5911c9e78351fae48e08479948f03287c9bfce25683b415d91",
+    "minif2f.mathd_numbertheory_640": "0aa3a0efb819ccc80316bcee8b2e9ef2d3de76e7c6dee8873b1e5af2dd518cf1",
+    "minif2f.mathd_numbertheory_66": "90c4396fa24d71ea8f207013a9ef42cc339ac249eacc57226f50e43cf017a803",
+    "minif2f.mathd_numbertheory_668": "dedb3035be2ff24438506f833ec86233aa06e377ae073c6df8e2ab5289694e71",
+    "minif2f.mathd_numbertheory_690": "3fbfa0340e6d15de0ebdad09e506e3e867719755c22d41515dd184b6fe1b7a91",
+    "minif2f.mathd_numbertheory_709": "9b998473c5bf4087bf8daeb00e3cae13c2b4c4957f2f92e2c486c598c536a309",
+    "minif2f.mathd_numbertheory_711": "8a1b114113e08d4fc2fffd72022433509d8f35361e93a729f2e28bc3d804cdd5",
+    "minif2f.mathd_numbertheory_728": "021d646991dd47c3c02ecd6cf60acd01a79a604fa6334fa602c938eefdadfa0a",
+    "minif2f.mathd_numbertheory_739": "8261c1a86521433384cc1b004e2ac8423407c4f2ad49f32cb4db159cfc25c736",
+    "minif2f.mathd_numbertheory_764": "807954397ba7f36f8cee41f15dd65da84f51d2770c0ab5948b6f998ceb8a3b76",
+    "minif2f.mathd_numbertheory_765": "3cbebe1b9858f885198c75270402c68afceb5fd7d2b0e3aa18b42a8dbeae96d5",
+    "minif2f.mathd_numbertheory_769": "df9d12af17ff6fd2ce30869fc5e566038554aad22e0df6a3327a435fc43e921b",
+    "minif2f.mathd_numbertheory_780": "ab266a10af03c508043371fe271d5cd620c5fa15a75a0e17d0162b6346e9588a",
+    "minif2f.mathd_numbertheory_81": "98f5f5917f44f40eff787d6488f3e51dab012017036c0a11da3a3577b70d1908",
+    "minif2f.mathd_numbertheory_84": "5dfd0db148265190764c0dec5d7dfedae09dff42bcf38f75a985cf60831445bd",
+    "minif2f.mathd_numbertheory_85": "907030b5fb87a6d8830865e9eef6f81bae83595bf95dcc0d535e52d5d77d7543",
+    "minif2f.mathd_numbertheory_92": "4694f1c8310a2332fbbf5bebe18fd2e8dc3b2cd94fd6a5f88efa598eb6412c01",
+    "minif2f.mathd_numbertheory_961": "1e8e4c78fde28cabf4ec80b48149ba3b00a3d414ec2c6ab71f849946bfd09ebf",
+    "minif2f.mathd_numbertheory_99": "26afe14a9b6b7a5d95b2bc144fd4503d42cdfc415db493dd0b3fb8622f22be91",
+    "minif2f.numbertheory_2dvd4expn": "13049c4239d93ccc09ba53d1c2e2c2de922c8f05629816ef20d395fb76212543",
+    "minif2f.numbertheory_2pownm1prime_nprime": "7aba949d220553acd737fad67d408b2b30a039114c1a585e8fbf31658b0cf666",
+    "minif2f.numbertheory_3pow2pownm1mod2pownp3eq2pownp2": "0a62e60eb01fd0b76a15372c6c5e4c46f58d39011d9800aa8dc6b5fa55bc5d4b",
+    "minif2f.numbertheory_4x3m7y3neq2003": "9500b4f212b76d23bb7681613521318567159724a0fb227af3ce8066fc8e2158",
+    "minif2f.numbertheory_aneqprodakp4_anmsqrtanp1eq2": "81e884341c0d62027afa45b6ae0267488d5abac7d16166c3233ce574793cdded",
+    "minif2f.numbertheory_aoddbdiv4asqpbsqmod8eq1": "1dfbaa00a1e7a2cfb172a647368d62d5116b25b22dc3400220c023ed37fdc2f6",
+    "minif2f.numbertheory_exk2powkeqapb2mulbpa2_aeq1": "be310c5183742d5e84283593936345faa1da8cd936ce31bfc0ca2c2dde836e85",
+    "minif2f.numbertheory_fxeq4powxp6powxp9powx_f2powmdvdf2pown": "ef73f7b2dd5d2048fb3f076e857274e1a7f5587d50258a4658ad9d13e519dd1b",
+    "minif2f.numbertheory_nckeqnm1ckpnm1ckm1": "a9f42c40a3290dbb6b31fcc9e2c84347d98d87db5f761372799c56b2986fc07b",
+    "minif2f.numbertheory_notEquiv2i2jasqbsqdiv8": "70b8c3463d7e0f7222bff16d42e9d501e3e2b25964cedb75f9d9c7be22411980",
+    "minif2f.numbertheory_prmdvsneqnsqmodpeq0": "56bf3e40c3988029473f5e59156150c96cf12200ba24972cf7264163663f33b3",
+    "minif2f.numbertheory_sqmod3in01d": "1d574e53d9e3c405c98854da58179ed93be2bebb0e7fa12b42e730e0eb2a4e56",
+    "minif2f.numbertheory_sqmod4in01d": "cabcfd0ac65bbafb10bfc3ac245ec0cb805e8201b80a40dce1d306c7e4ac3cfd",
+    "minif2f.numbertheory_sumkmulnckeqnmul2pownm1": "ba5500e9223446e41dff82b84d68afa8a1849e94601d640d8c10935b97ee4d6c",
+    "minif2f.numbertheory_x5neqy2p4": "c864eafd98356d94b70b70e9bb150aab05035e689f74d71378f1da1a1ddf487f",
+    "minif2f.numbertheory_xsqpysqintdenomeq": "225d05118422ab20890a5ef3e37cd4f20ba5fc3e926ab45828cf40e92e7b4f34"
+  },
+  "schema_version": 1,
+  "source": {
+    "commit": "5746b7d6c47855ce1294bed87329618ff7f1bc31",
+    "tree": "61dbd8922b48ff6afc6656cdf2c50e95274c49c9"
+  }
+}

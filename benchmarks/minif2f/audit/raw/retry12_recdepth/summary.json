@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "run_id": "retry12_recdepth:2026-11-19T12:09:10.094910+00:00",
+  "dataset": "retry12_recdepth",
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "total_problems": 12,
+  "status_counts": {
+    "ok": 9,
+    "findings": 1,
+    "compile_error": 0,
+    "timeout": 1,
+    "infra_error": 1
+  },
+  "compile_error_counts": {
+    "total": 0,
+    "with_findings": 0,
+    "without_findings": 0,
+    "compile_only": 0
+  },
+  "total_findings": 2,
+  "confidence_counts": {
+    "proven": 0,
+    "maybe": 2
+  },
+  "findings_by_category": {
+    "Integer Division Truncation": {
+      "total": 1,
+      "proven": 0,
+      "maybe": 1
+    },
+    "0-Indexed Range": {
+      "total": 1,
+      "proven": 0,
+      "maybe": 1
+    }
+  },
+  "proved_by_counts": {
+    "none": 2
+  }
+}

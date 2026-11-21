@@ -1,0 +1,6 @@
+{"id": "ctrl_vacuous", "lean_code": "set_option maxHeartbeats 0\n\nopen BigOperators Real Nat Topology Rat\n\ntheorem ctrl_vacuous (x : ℝ) (h₀ : x < 0) (h₁ : 0 < x) : x = 5 := by sorry\n", "source": "synthetic-control"}
+{"id": "ctrl_natsub", "lean_code": "set_option maxHeartbeats 0\n\nopen BigOperators Real Nat Topology Rat\n\ntheorem ctrl_natsub (a b : ℕ) : a - b + b = a := by sorry\n", "source": "synthetic-control"}
+{"id": "ctrl_div", "lean_code": "set_option maxHeartbeats 0\n\nopen BigOperators Real Nat Topology Rat\n\ntheorem ctrl_div (x : ℝ) : 1 / x * x = 1 := by sorry\n", "source": "synthetic-control"}
+{"id": "ctrl_trunc", "lean_code": "set_option maxHeartbeats 0\n\nopen BigOperators Real Nat Topology Rat\n\ntheorem ctrl_trunc : ((1 / 4 : ℕ) : ℝ) = 1 / 4 := by sorry\n", "source": "synthetic-control"}
+{"id": "ctrl_counter", "lean_code": "set_option maxHeartbeats 0\n\nopen BigOperators Real Nat Topology Rat\n\ntheorem ctrl_counter (n : ℕ) (h : n < 10) : n < 5 := by sorry\n", "source": "synthetic-control"}
+{"id": "ctrl_clean", "lean_code": "set_option maxHeartbeats 0\n\nopen BigOperators Real Nat Topology Rat\n\ntheorem ctrl_clean (x : ℝ) (h : 0 < x) : 0 < x * x := by sorry\n", "source": "synthetic-control"}

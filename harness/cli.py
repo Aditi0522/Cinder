@@ -30,6 +30,16 @@ def main() -> int:
     parser.add_argument("--samples", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, help="Defaults to OUTPUT.manifest.json")
+    parser.add_argument(
+        "--benchmark-manifest",
+        type=Path,
+        help="Benchmark manifest; required for miniF2F problems",
+    )
+    parser.add_argument(
+        "--allow-test",
+        action="store_true",
+        help="Permit problems from a benchmark's locked test split",
+    )
     args = parser.parse_args()
     try:
         config = VerifierConfig.load(args.config)
@@ -39,6 +49,12 @@ def main() -> int:
             if problem.problem_id in problems:
                 raise ValueError(f"Duplicate problem id: {problem.problem_id}")
             problems[problem.problem_id] = problem
+        if any(pid.startswith("minif2f.") for pid in problems) and not args.benchmark_manifest:
+            raise ValueError("minif2f problems require --benchmark-manifest")
+        if args.benchmark_manifest:
+            from harness.benchmarks.minif2f import check_problems
+
+            check_problems(args.benchmark_manifest, list(problems.values()), args.allow_test)
         samples = [Sample.from_record(record) for record in read_jsonl(args.samples)]
         seen = set()
         for sample in samples:

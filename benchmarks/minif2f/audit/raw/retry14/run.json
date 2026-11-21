@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "retry14:2026-11-19T11:43:09.936379+00:00",
+  "started_at": "2026-11-19T11:43:09.936379+00:00",
+  "dataset": {
+    "input": "/kaggle/working/audit/retry14.jsonl",
+    "resolved_name": "retry14",
+    "format": "jsonl",
+    "split": null,
+    "header_file": null,
+    "total_hint": 14
+  },
+  "execution": {
+    "workspace": ".",
+    "toolchain": "leanprover/lean4:v4.30.0-rc2",
+    "backend": "subprocess",
+    "workers": 1,
+    "timeout": 300,
+    "output_dir": "/kaggle/working/audit/raw/retry14",
+    "resuming": false
+  }
+}
