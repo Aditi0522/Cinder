@@ -8,7 +8,7 @@
     "git_version": "git version 2.43.0",
     "license": "MIT"
   },
-  "pinned_on": "2026-11-18",
+  "pinned_on": "2026-11-21",
   "toolchain": {
     "lean": "leanprover/lean4:v4.24.0",
     "file_sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
@@ -513,12 +513,58 @@
   },
   "derived": {
     "extracted_jsonl": {
-      "path": "extracted.jsonl",
+      "path": "benchmarks/minif2f/extracted.jsonl",
       "sha256": "0a6ed8a95d77bc37a74db722fc297d05f59d117e11e0267e386986c2fe549456"
     },
+    "exclusions": {
+      "path": "benchmarks/minif2f/exclusions.jsonl",
+      "sha256": "bee077a7626bdfe855b12040c7cba0dcc91524789fc9ad4c8a4c9b37eac2b9c0"
+    },
+    "annotations": {
+      "path": "benchmarks/minif2f/annotations.jsonl",
+      "sha256": "b4b80ff736edb70ad6dee65c38fcc1f4cd4d3813b21b16866e6f96cd13b66e3b"
+    },
+    "audit_input_full488": {
+      "path": "benchmarks/minif2f/audit/full488.jsonl",
+      "sha256": "56e837cb3877eeff78159cc08c29e03f42c0132ff34f9315c6ffa669fa29d625"
+    },
+    "audit_results": {
+      "path": "benchmarks/minif2f/audit/audit_results.jsonl",
+      "sha256": "5d4673bba83575b335655c481f45ad4ab47a8e85cc87a9bb9f858d8abc6e2cbf"
+    },
+    "vacuity_screen": {
+      "path": "benchmarks/minif2f/audit/vacuity_screen.jsonl",
+      "sha256": "6af69276eaeb750b6964cb042fe8c3f93cf44a0b7340ba2202bae6252197996e"
+    },
+    "elab_check": {
+      "path": "benchmarks/minif2f/audit/elab_check.jsonl",
+      "sha256": "00bfa09e0c4c8294b798c2d67cafa0e529617079c638dabe51c9cc7eab633483"
+    },
+    "checker_pins": {
+      "path": "benchmarks/minif2f/audit/checker_pins.json",
+      "sha256": "bb7ab663900a95736cab0a30083a2341e391bd8d286b4591d6d6d977a541ad58"
+    }
+  },
+  "tools": {
     "extractor": {
       "path": "utils/minif2f_extract.py",
       "sha256": "d321369be611cc025be253a244cababcf73eb44630e11d9a05831a2ca6de6390"
+    },
+    "audit_input_builder": {
+      "path": "utils/minif2f_audit_input.py",
+      "sha256": "1df21f7b13ace9fd6d9dcf6c64e83dd0a7fff97bdd7a279c393d117d9b57f07f"
+    },
+    "vacuity_screen": {
+      "path": "utils/vacuity_screen.py",
+      "sha256": "ee127ee67c6575eca691b081cca20a33c352acdece41968991a900c677977122"
+    },
+    "elab_check": {
+      "path": "utils/minif2f_elab_check.py",
+      "sha256": "3a55738797bcb87ab947efd9527d9cfe96ace80bf4092e54754e721958a91683"
+    },
+    "ledger_builder": {
+      "path": "utils/build_ledger.py",
+      "sha256": "217f22cbb82ea58030873add443577ef014519015aa02975195c2267b237acad"
     }
   }
 }
