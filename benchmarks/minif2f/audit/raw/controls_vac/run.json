@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "controls_vac:2026-11-19T12:20:15.437173+00:00",
+  "started_at": "2026-11-19T12:20:15.437173+00:00",
+  "dataset": {
+    "input": "/kaggle/working/audit/controls_vac.jsonl",
+    "resolved_name": "controls_vac",
+    "format": "jsonl",
+    "split": null,
+    "header_file": null,
+    "total_hint": 6
+  },
+  "execution": {
+    "workspace": ".",
+    "toolchain": "leanprover/lean4:v4.30.0-rc2",
+    "backend": "subprocess",
+    "workers": 1,
+    "timeout": 120,
+    "output_dir": "/kaggle/working/audit/raw/controls_vac",
+    "resuming": false
+  }
+}

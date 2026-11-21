@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "run_id": "controls_vac:2026-11-19T12:20:15.437173+00:00",
+  "dataset": "controls_vac",
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "total_problems": 6,
+  "status_counts": {
+    "ok": 2,
+    "findings": 4,
+    "compile_error": 0,
+    "timeout": 0,
+    "infra_error": 0
+  },
+  "compile_error_counts": {
+    "total": 0,
+    "with_findings": 0,
+    "without_findings": 0,
+    "compile_only": 0
+  },
+  "total_findings": 4,
+  "confidence_counts": {
+    "proven": 4,
+    "maybe": 0
+  },
+  "findings_by_category": {
+    "Vacuous Theorem": {
+      "total": 4,
+      "proven": 4,
+      "maybe": 0
+    }
+  },
+  "proved_by_counts": {
+    "omega": 4
+  }
+}
