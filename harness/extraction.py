@@ -4,7 +4,7 @@ import re
 
 
 def extract_proof(raw_output: str, output_format: str) -> str:
-    if output_format == "proof":
+    if output_format in {"proof", "declaration"}:
         proof = raw_output.strip()
     elif output_format == "markdown":
         blocks = re.findall(r"```(?:lean4?|Lean4?)\s*\n(.*?)```", raw_output, re.DOTALL)

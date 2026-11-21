@@ -1,0 +1,13 @@
+{
+  "command": "bash scripts/setup.sh --environment minif2f",
+  "git_commit": "e6322bfad29deb6acb4827e219e0dde70b6ccccc",
+  "exit_code": 0,
+  "elapsed_seconds": 219.081390293999,
+  "fresh_clone": true,
+  "disk_backed_checkout": true,
+  "reused_global_download_and_toolchain_caches": true,
+  "test_summary": "136 passed in 131.20s (0:02:11)",
+  "log": "/tmp/cinder-issue3-clean-final-validation.log",
+  "tracked_log": "results/validation/issue3-clean-checkout.log",
+  "log_sha256": "f4eccfa537beee891becb3803972e8ecd6a106b4ac8dda54884c61d659a5b269"
+}

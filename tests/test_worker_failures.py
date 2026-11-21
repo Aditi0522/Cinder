@@ -31,7 +31,7 @@ def worker(monkeypatch):
         if sleep_seconds:
             verifier.config = replace(verifier.config, timeout_seconds=0.3)
         problem = Problem("p", "True", verifier.config.environment_id)
-        return verifier._check(problem, "by trivial")
+        return verifier._check(problem, "by trivial")[:3]
 
     return replay
 

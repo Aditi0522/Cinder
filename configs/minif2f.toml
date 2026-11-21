@@ -1,0 +1,12 @@
+environment_id = "minif2f-4.24.0"
+project_dir = "environments/minif2f"
+lean_toolchain = "leanprover/lean4:v4.24.0"
+mathlib_commit = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+benchmark_repository = "https://github.com/yangky11/miniF2F-lean4"
+benchmark_commit = "5746b7d6c47855ce1294bed87329618ff7f1bc31"
+timeout_seconds = 60
+max_heartbeats = 200000
+workers = 1
+memory_mb = 4096
+max_processes = 64
+disk_mb = 64

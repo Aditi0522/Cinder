@@ -20,7 +20,10 @@ dev = ["pytest>=8,<10", "ruff>=0.11,<1"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-markers = ["integration: requires the pinned Lean toolchain and Linux bubblewrap"]
+markers = [
+  "integration: requires the pinned Lean toolchain and resource-limited Linux sandbox",
+  "mathlib: requires the pinned miniF2F/Mathlib environment",
+]
 
 [tool.ruff]
 target-version = "py311"
