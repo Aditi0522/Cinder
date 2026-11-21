@@ -1,0 +1,6 @@
+[submodule "benchmarks/minif2f/upstream"]
+	path = benchmarks/minif2f/upstream
+	url = https://github.com/yangky11/miniF2F-lean4
+[submodule "tools/atp-checkers"]
+	path = tools/atp-checkers
+	url = https://github.com/Shashi456/atp-checkers

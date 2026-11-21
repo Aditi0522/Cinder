@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "run_id": "controls:2026-11-19T12:16:11.304526+00:00",
+  "dataset": "controls",
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "total_problems": 6,
+  "status_counts": {
+    "ok": 2,
+    "findings": 4,
+    "compile_error": 0,
+    "timeout": 0,
+    "infra_error": 0
+  },
+  "compile_error_counts": {
+    "total": 0,
+    "with_findings": 0,
+    "without_findings": 0,
+    "compile_only": 0
+  },
+  "total_findings": 6,
+  "confidence_counts": {
+    "proven": 3,
+    "maybe": 3
+  },
+  "findings_by_category": {
+    "Counterexample Found": {
+      "total": 2,
+      "proven": 2,
+      "maybe": 0
+    },
+    "Truncated Nat Subtraction": {
+      "total": 1,
+      "proven": 0,
+      "maybe": 1
+    },
+    "Potential Division by Zero": {
+      "total": 1,
+      "proven": 0,
+      "maybe": 1
+    },
+    "Integer Division Truncation": {
+      "total": 1,
+      "proven": 1,
+      "maybe": 0
+    },
+    "Cast After Truncation": {
+      "total": 1,
+      "proven": 0,
+      "maybe": 1
+    }
+  },
+  "proved_by_counts": {
+    "none": 3,
+    "decide": 2,
+    "definitional": 1
+  }
+}

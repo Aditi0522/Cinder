@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "run_id": "retry14:2026-11-19T11:43:09.936379+00:00",
+  "dataset": "retry14",
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "total_problems": 14,
+  "status_counts": {
+    "ok": 0,
+    "findings": 0,
+    "compile_error": 1,
+    "timeout": 1,
+    "infra_error": 12
+  },
+  "compile_error_counts": {
+    "total": 1,
+    "with_findings": 0,
+    "without_findings": 1,
+    "compile_only": 1
+  },
+  "total_findings": 0,
+  "confidence_counts": {
+    "proven": 0,
+    "maybe": 0
+  },
+  "findings_by_category": {},
+  "proved_by_counts": {}
+}

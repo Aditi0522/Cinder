@@ -1,0 +1,9 @@
+checker_commit: 3e7e99d027fece04d9cd96288cdd040c366458e5
+toolchain: leanprover/lean4:v4.30.0-rc2
+ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61  lean-toolchain
+dae764210cdf0a02aa99b7c99f2f07a9722ca3081d57b964a7024c6b9a7375fc  lake-manifest.json
+4
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       1.9Gi        21Gi       1.9Mi       8.4Gi        29Gi
+Model name:                              Intel(R) Xeon(R) CPU @ 2.20GHz
+Thu Nov 19 12:17:07 PM UTC 2026
