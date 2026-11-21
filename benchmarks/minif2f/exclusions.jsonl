@@ -1,0 +1,1 @@
+{"checker_commit": "3e7e99d027fece04d9cd96288cdd040c366458e5", "decision": "pending_review", "evidence": [{"checker": "vacuity_screen", "confidence": "proven", "message": "hypotheses contradictory; kernel-checked", "provedBy": "exfalso + arithmetic tactics"}], "notes": "", "problem_id": "mathd_algebra_275", "reviewers": [], "tier": 1}
